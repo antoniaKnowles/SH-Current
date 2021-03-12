@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_knowledge"
+            app:destination="@id/knowledge" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -44,6 +47,15 @@
             app:destination="@id/SecondFragment" />
         <action
             android:id="@+id/action_thirdFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/knowledge"
+        android:name="com.example.myapplication.Knowledge"
+        android:label="fragment_knowledge"
+        tools:layout="@layout/fragment_knowledge" >
+        <action
+            android:id="@+id/action_knowledge_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

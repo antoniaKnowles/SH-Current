@@ -31,6 +31,19 @@ public class ThirdFragment extends Fragment {
 
         getAns();
 
+
+        view.findViewById(R.id.floatingActionButton3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                NavHostFragment.findNavController(ThirdFragment.this)
+                        .navigate(R.id.action_thirdFragment_to_FirstFragment);
+
+
+            }
+        });
+
         view.findViewById(R.id.button_third).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

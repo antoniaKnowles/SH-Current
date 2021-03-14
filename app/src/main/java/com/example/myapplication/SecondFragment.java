@@ -11,25 +11,26 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import java.io.IOException;
+
 public class SecondFragment extends Fragment {
 
 
-    private Questions qLib = new Questions();
-
-    private TextView mScoreView;
-    private TextView mQuestion1View;
-    private TextView mQuestion2View;
-    private Button mButtonChoice1;
-    private Button mButtonChoice2;
-    private Button mButtonChoice3;
-    private Button mButtonChoice4;
+    public Questions qLib = new Questions();
+   // public ThirdFragment t = new ThirdFragment();
+    public TextView mScoreView;
+    public TextView mQuestion1View;
+    public TextView mQuestion2View;
+    public Button mButtonChoice1;
+    public Button mButtonChoice2;
+    public Button mButtonChoice3;
+    public Button mButtonChoice4;
     private String mAnswer;
 
     private int mQuestionNumber = MainActivity.getQuestionNumber();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
 
 
         // Inflate the layout for this fragment
@@ -40,26 +41,40 @@ public class SecondFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-
-
-        mQuestion1View = (TextView)view.findViewById(R.id.textview_second);
-        mQuestion2View = (TextView)view.findViewById(R.id.textview_second_two);
-        mButtonChoice1 = (Button)view.findViewById(R.id.button_one);
+        mQuestion1View = (TextView) view.findViewById(R.id.textview_second);
+        mQuestion2View = (TextView) view.findViewById(R.id.textview_second_two);
+        mButtonChoice1 = (Button) view.findViewById(R.id.button_one);
         mButtonChoice2 = (Button) view.findViewById(R.id.button_two);
-        mButtonChoice3 = (Button)view.findViewById(R.id.button_three);
-        mButtonChoice4 = (Button)view.findViewById(R.id.button_four);
+        mButtonChoice3 = (Button) view.findViewById(R.id.button_three);
+        mButtonChoice4 = (Button) view.findViewById(R.id.button_four);
 
+        try {
+            qLib.ReadFilesOne();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         updateQuestion();
 
 
+        view.findViewById(R.id.floatingActionButton_help).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_knowledge);
+
+
+            }
+        });
 
         view.findViewById(R.id.floatingActionButton2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
 
 
             }
@@ -70,15 +85,14 @@ public class SecondFragment extends Fragment {
             public void onClick(View view) {
 
 
-                if (mButtonChoice4.getText() == mAnswer){
+                if (mButtonChoice4.getText().equals(mAnswer)) {
 
                     MainActivity.addQuestionNumber();
 
                     NavHostFragment.findNavController(SecondFragment.this)
                             .navigate(R.id.action_SecondFragment_self);
 
-                }
-                if(mButtonChoice4.getText() != mAnswer) {
+                }else{
 
 
                     NavHostFragment.findNavController(SecondFragment.this)
@@ -94,16 +108,16 @@ public class SecondFragment extends Fragment {
             public void onClick(View view) {
 
 
-                if (mButtonChoice3.getText() == mAnswer){
+                if (mButtonChoice3.getText().equals(mAnswer)) {
 
                     MainActivity.addQuestionNumber();
 
                     NavHostFragment.findNavController(SecondFragment.this)
                             .navigate(R.id.action_SecondFragment_self);
 
-                }
+                }else{
 
-                if(mButtonChoice3.getText() != mAnswer) {
+
 
 
                     NavHostFragment.findNavController(SecondFragment.this)
@@ -113,7 +127,6 @@ public class SecondFragment extends Fragment {
 
             }
         });
-
 
 
         view.findViewById(R.id.button_two).setOnClickListener(new View.OnClickListener() {
@@ -121,27 +134,22 @@ public class SecondFragment extends Fragment {
             public void onClick(View view) {
 
 
-                if (mButtonChoice2.getText() == mAnswer){
+                if (mButtonChoice2.getText().equals(mAnswer)) {
 
                     MainActivity.addQuestionNumber();
 
                     NavHostFragment.findNavController(SecondFragment.this)
                             .navigate(R.id.action_SecondFragment_self);
 
-                }
-
-                if(mButtonChoice2.getText() != mAnswer) {
-
-
+                }else{
                     NavHostFragment.findNavController(SecondFragment.this)
                             .navigate(R.id.action_SecondFragment_to_thirdFragment);
-
                 }
+
+
 
             }
         });
-
-
 
 
         view.findViewById(R.id.button_one).setOnClickListener(new View.OnClickListener() {
@@ -149,16 +157,14 @@ public class SecondFragment extends Fragment {
             public void onClick(View view) {
 
 
-                if (mButtonChoice1.getText() == mAnswer){
+                if (mButtonChoice1.getText().equals(mAnswer)) {
 
                     MainActivity.addQuestionNumber();
 
                     NavHostFragment.findNavController(SecondFragment.this)
                             .navigate(R.id.action_SecondFragment_self);
 
-                }
-
-                if(mButtonChoice1.getText() != mAnswer) {
+                }else{
 
 
                     NavHostFragment.findNavController(SecondFragment.this)
@@ -170,25 +176,31 @@ public class SecondFragment extends Fragment {
         });
 
 
+    }
 
-
-
-
-
+    private void updateQuestion() {
+        mQuestion1View.setText(qLib.getQuestion1(mQuestionNumber));//was questions
+        mQuestion2View.setText(qLib.getQuestion2(mQuestionNumber));
+        mButtonChoice1.setText(qLib.getchoice1(mQuestionNumber));
+        mButtonChoice2.setText(qLib.getchoice2(mQuestionNumber));
+        mButtonChoice3.setText(qLib.getchoice3(mQuestionNumber));
+        mButtonChoice4.setText(qLib.getchoice4(mQuestionNumber));
+        mAnswer = qLib.getAns(mQuestionNumber);
+        //t.ansPass(mAnswer);
+        MainActivity.currentAns(mAnswer);
 
     }
 
-    private void updateQuestion(){
-        mQuestion1View.setText(Questions.getQuestion1(mQuestionNumber));
-        mQuestion2View.setText(Questions.getQuestion2(mQuestionNumber));
-        mButtonChoice1.setText(Questions.getchoice1(mQuestionNumber));
-        mButtonChoice2.setText(Questions.getchoice2(mQuestionNumber));
-        mButtonChoice3.setText(Questions.getchoice3(mQuestionNumber));
-        mButtonChoice4.setText(Questions.getchoice4(mQuestionNumber));
-        mAnswer = Questions.getAns(mQuestionNumber);
-
+    public Questions returnQ(){
+        return qLib;
     }
 
+    public String getmAnswer(){
+        return qLib.getAns(mQuestionNumber);
+    }
 
 
 }
+
+
+

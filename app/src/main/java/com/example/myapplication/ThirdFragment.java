@@ -12,8 +12,12 @@ import androidx.navigation.fragment.NavHostFragment;
 
 public class ThirdFragment extends Fragment {
 
-    private TextView Ans;
+  // public SecondFragment Sec = new SecondFragment();
+  //  public Questions qLib = new Questions();
+    public TextView Ans;
     private String mAnswer;
+   // private  String str = "";
+
 
     @Override
     public View onCreateView(
@@ -24,13 +28,22 @@ public class ThirdFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_third, container, false);
     }
 
+    public void ansPass(String in){
+      //  str = in;
+    }
+
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+    //    qLib = Sec.returnQ();
+
+
         Ans = (TextView)view.findViewById(R.id.incorect_Ans);
 
-        getAns();
 
+         // int no = MainActivity.getQuestionNumber();
+         // String st = Questions.getAns(no);
+        Ans.setText(MainActivity.getAns());
 
         view.findViewById(R.id.floatingActionButton3).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +60,7 @@ public class ThirdFragment extends Fragment {
         view.findViewById(R.id.button_third).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MainActivity.addQuestionNumber();
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(R.id.action_thirdFragment_to_SecondFragment);
             }
@@ -54,8 +68,5 @@ public class ThirdFragment extends Fragment {
     }
 
 
-    private void getAns() {
-        Ans.setText(Questions.getAns(MainActivity.getQuestionNumber()));
 
-    }
 }

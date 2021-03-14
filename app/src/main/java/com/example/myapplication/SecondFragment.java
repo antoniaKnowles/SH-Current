@@ -17,8 +17,6 @@ public class SecondFragment extends Fragment {
 
 
     public Questions qLib = new Questions();
-   // public ThirdFragment t = new ThirdFragment();
-    public TextView mScoreView;
     public TextView mQuestion1View;
     public TextView mQuestion2View;
     public Button mButtonChoice1;
@@ -33,7 +31,6 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second, container, false);
     }
 
@@ -186,18 +183,12 @@ public class SecondFragment extends Fragment {
         mButtonChoice3.setText(qLib.getchoice3(mQuestionNumber));
         mButtonChoice4.setText(qLib.getchoice4(mQuestionNumber));
         mAnswer = qLib.getAns(mQuestionNumber);
-        //t.ansPass(mAnswer);
+
         MainActivity.currentAns(mAnswer);
 
     }
 
-    public Questions returnQ(){
-        return qLib;
-    }
 
-    public String getmAnswer(){
-        return qLib.getAns(mQuestionNumber);
-    }
 
 
 }

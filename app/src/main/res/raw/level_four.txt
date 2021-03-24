@@ -1,0 +1,22 @@
+int number = 99;;;Correct ?;;Yes;;No;;Yes
+float score = 5.6f;;Correct?;;Yes;;No;;No
+String name = 'Ann';;;Correct?;;Yes;;No;;No
+Boolean user = false;;;Correct?;;Yes;;No;;No
+char FirstInitial 'A';;;Correct?;;Yes;;No;;No
+int id = 4.5;;;Correct?;;Yes;;No;;No
+String name = "Bob";;;Correct?;;Yes;;No;;Yes
+int = 0;;;Correct?;;Yes;;No;;No
+boolean user = false;;;Correct?;;Yes;;No;;Yes
+float score = "Sue";Correct?;;Yes;;No;;No
+char FirstInitial = "k";;Correct?;;Yes;;No;;No
+String id = "56748394";;;Correct?;;Yes;;No;;Yes
+String id = 56748394;;;Correct?;;Yes;;No;;No
+boolean user = true;;;Correct?;;Yes;;No;;Yes
+float score = 5.6f;;;Correct?;;Yes;;No;;Yes
+String id = 56748394;;;Correct?;;Yes;;No;;No
+char FirstInitial = 'K';;Correct?;;Yes;;No;;No
+boolean user = true;;Correct?;;Yes;;No;;No
+
+
+
+

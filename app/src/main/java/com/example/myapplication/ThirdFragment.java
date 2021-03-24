@@ -16,11 +16,8 @@ public class ThirdFragment extends Fragment {
     public TextView Ans;
 
     @Override
-    public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+      // Get the layout for this SecondFragment
         return inflater.inflate(R.layout.fragment_third, container, false);
     }
 

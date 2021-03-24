@@ -1,0 +1,23 @@
+
+Inheritance
+
+sub class inherates the methods in super class what type of inheratance is this ?;;Single level
+what is when a instance of a nother class is declared in a diffrent class and a method is used from the objects class;;Single level
+
+
+
+public class Sub_class extends Super_class {}, is this correct?;;yes
+
+public class Sub_class expand Super_class {}, is this correct?;;no
+
+
+
+what type of inheritance is grandparent -> parent -> child inheritance;;Multi level inheritance
+what type of inheritance is parent -> child inheritance;;Single level inheritance
+
+can a super class be used to extend more than one class;;yes
+what type of inheritance uses repeated extends to one base class;;Hierarchical Inheritance
+
+Benifit of inheratance?;; reusability of code
+
+

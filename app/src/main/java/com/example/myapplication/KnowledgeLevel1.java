@@ -13,9 +13,8 @@ class KnowledgeLevel1 extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        // Get the layout for the first knowledge Fragment
         return inflater.inflate(R.layout.fragment_knowledge_level1, container, false);
     }
 }

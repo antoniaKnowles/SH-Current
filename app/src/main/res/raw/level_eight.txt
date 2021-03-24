@@ -1,0 +1,28 @@
+what is not the method name in a class called size?;;big;;small;;medium;;fork;;fork
+what is not the method name in a class called flower?;;stem;;tree;;petal;;thorn;;tree
+public class Main { int x = 5;} is this correct class declratuion?;;yes
+Main myObj = new Main(); what dose this create?;;Object of main class
+public static void main(String[] args) {},what is this?;;
+what dose Main myObj = new Main(); System.out.println(myObj.x);do ?;;acesses the x attribute from main
+myObj.x = 40; what dose this do ?;; sets the object of main class vaeable xx to 40
+Does methods contain classes?;;No
+Does classes contains methods?;;Yes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

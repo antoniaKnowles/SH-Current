@@ -1,0 +1,27 @@
+Which is not a type of modifier?;;Public;;Private;;Method;;Final;;Method
+What defines access type of the method?;;Modifiers;;Names;;Parameter;;Modifiers
+What is a non access modifier?;;Private;;Protected;;Static;;Variables;;Static
+
+Which Modifier only allows for class access?;;Private
+Which Modifiers only allows for access to everyone?;;Public
+Are access always need to be defined by acces control modifiers?;;No
+
+
+What non access modifier can be used to creating class methods?;;Static
+What non access modifier finalizing the implementations of methods?;;Final
+
+What is a Parameter?;;Value passed into the method
+
+Which can not be a return type?;;String;;Void;;int;;Static;;Static
+Which is not included in a method creation?;;methodName;;parameters;;modifiers;;IF statments;;IF statments
+
+
+public static String methodName(int a, int b) {},Is this correct method creation?;;Yes
+public int methodName(int a, int b) {},Is this correct?;;Yes
+public static void main(String[] args) { },Is this correct?;;Yes
+
+What case is return statments not requires?;;Void
+
+
+
+

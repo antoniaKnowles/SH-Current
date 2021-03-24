@@ -1,5 +1,10 @@
 Encapsulation
 
 What is not a step to establish encapulation?;;private varables ;;getters;;setters
-benifits of encapulation?;;read/write only fields of class;;
-a class can have total control of its fields
+benifits of encapulation?;;read/write only fields of class;;a class can have total control of its fields;;easier debugging
+
+public String getName() {  return name;  } part of encapulation?;;yes
+public void setAge( int newAge) {   age = newAge; }part of encapulation?;;yes
+private String name;part of encapulation?;;yes
+
+what method of oop reduces the amout of varables seen during debugging?;;encapsulation

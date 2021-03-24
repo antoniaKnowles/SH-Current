@@ -1,1 +1,21 @@
 Abstraction
+
+
+public abstract class humans{} correct?;;yes
+public interface humans{} correct?;;yes
+
+can non abstract classes have abstract methods?;;no
+can a abstract classes have non abstract methods?;;yes
+can interfaces contain non abstract methods?;;no
+
+what is the main purpose of abstraction?;to hide unneeded sections from the user
+
+public abstract double computePay(); is this a correct method?;;yes
+
+public abstract double computePay(int a); is this a correct method?;;no - cannot have body
+
+public abstract double computePay(){ int a = b+c;} is this a correct method?;;no - cannot have body
+
+who to call a interface from another class;;implements
+
+what is a benifit to a interface?;;improved security

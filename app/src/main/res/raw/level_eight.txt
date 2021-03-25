@@ -1,12 +1,13 @@
-what is not the method name in a class called size?;;big;;small;;medium;;fork;;fork
-what is not the method name in a class called flower?;;stem;;tree;;petal;;thorn;;tree
-public class Main { int x = 5;} is this correct class declratuion?;;yes
-Main myObj = new Main(); what dose this create?;;Object of main class
-public static void main(String[] args) {},what is this?;;
-what dose Main myObj = new Main(); System.out.println(myObj.x);do ?;;acesses the x attribute from main
-myObj.x = 40; what dose this do ?;; sets the object of main class vaeable xx to 40
-Does methods contain classes?;;No
-Does classes contains methods?;;Yes
+What is not the method name in;; a class called Size?;;Small;;Fork;;Fork
+What is not the method name in;; a class called Flower?;;Tree;;Petal;;Tree
+What is not the method name in;; a class called Camera?;;Lens;;Cup;;Cup
+What is not the method name in;; a class called Table?;;Wood;;Chair;;Chair
+public class Main { int x = 5;};; is this a Class declaration?;;Yes;;No;;Yes
+public class{ };; is this a Class declaration?;;Yes;;No;;No it requires identifier
+Main Obj = new Main();;;Explanation?;;Object of Main Class;;Main Class;;Object of Main Class
+Obj.score = 10;;;Explanation ?;;Sets score in the object class to 10;; sets object to 10;;Sets score in the object class to 10
+Does methods contain classes?;;Yes;;No;;No
+Does classes contains methods?;;Yes;;No;;Yes
 
 
 

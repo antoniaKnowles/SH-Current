@@ -16,5 +16,3 @@ What does ||;; represent?;;End of line ;;Or ;;Not ;;And ;;Or
 What does .equals();; represent?;;Numerical Equals ;;Greater than ;;String Equals ;;Less than ;;String Equals
 What does <;; represent?;;Less than;;End of line ;;Not ;;Greater than;;Less than
 What does >;; represent?;;Equal too ;;Less than ;;Greater than ;;End of line ;;Greater than
-
-q2-a4

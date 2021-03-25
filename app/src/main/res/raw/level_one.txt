@@ -8,5 +8,3 @@ What type belongs to;;"Name";;Float;;Char;;String;;Integer(Int);;String
 What type belongs to;;1.3724;;String;;Integer(Int);;Float;;Char;;Float
 What type belongs to;;true;;Char;;Boolean;;Float;;Integer(Int);;Boolean
 What type belongs to;;'j';;String;;Char;;Float;;Integer(Int);;Char
-
-q2-a4

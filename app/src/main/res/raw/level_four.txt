@@ -16,7 +16,3 @@ float score = 5.6f;;;Correct?;;Yes;;No;;Yes
 String id = 56748394;;;Correct?;;Yes;;No;;No
 char FirstInitial = 'K';;Correct?;;Yes;;No;;No
 boolean user = true;;Correct?;;Yes;;No;;No
-
-
-
-q2-a2

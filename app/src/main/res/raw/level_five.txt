@@ -1,108 +1,21 @@
-while(booleanVariable == true){
-......
-};;Correct ?;;Yes;;No;;Yes
-
-for(break;){
-......
-};;Correct ?;;Yes;;No;;No;;break is not a expression
-
-for(int i =0;i< 6;i--){
-......
-};;Correct ?;;Yes;;No;;Yes
-
-do while(i<6);;;Correct ?;;Yes;;No;;No;; do requires content such as i = i +2;
-
-if{
-i = i +2;
-};;Correct ?;;Yes;;No;;No;;if requires (expression)
-
-if(j<k){
-....
-}else if(k==j){
- ....
-}else{
- ...
-};;Correct ?;;Yes;;No;;Yes
-
-switch(intergerVarable){
-case 1: System.out.println("Option 1");
-break;
-case 2: System.out.println("Option 2");
-break;};;Correct ?;;Yes;;No;;Yes
-
-if(i>0){
-......
-}else{
-......
-}else{
-.....
-};;Correct ?;;Yes;;No;;No;;Can not have two elses requires one to be a else if
-
-switch(intergerVarable){
-break;
-};;Correct ?;;Yes;;No;;No;;Requires cases
-
-while(variable = 5)
-......
-};;Correct ?;;Yes;;No;;No;;Missing {
-
-for(int i =0;i< 6;i++){
- while(i<3){
-   System.out.println("Variable i is below 3");
- }
-};;Correct ?;;Yes;;No;;Yes
-
-switch(stringVarable){
-case "one": System.out.println("Option 1");
-break;
-case "two": System.out.println("Option 2");
-break;};;Correct ?;;Yes;;No;;Yes
-
-do{
-i = i +2;
-}while(i<6);;;Correct ?;;Yes;;No;;Yes
-
-do{
-i = i +2;
-}while;;;Correct ?;;Yes;;No;;No;;While requires () with expression
-
-if(variableString.equals(inputString)){
-break;
-};;Correct ?;;Yes;;No;;Yes
-
-for{
-......
-};;Correct ?;;Yes;;No;;No;;Requires (....) with expression
-
-while(i<10{
-......
-};;Correct ?;;Yes;;No;;No;;Missing )
-
-switch(){
-case 1: System.out.println("Option 1");
-break;
-case 2: System.out.println("Option 2");
-break;};;Correct ?;;Yes;;No;;No;;Requires a exxpresion for Cases to satisfy
-
-for(int i =0;i< 6;i++){
-......
-};;Correct ?;;Yes;;No;;Yes
-
-if(variableString.equals(inputString));;Correct ?;;Yes;;No;;No;; if(expression) is required
-
-switch(intergerVarable){
-case 1: System.out.println("Option 1");
-case 2: System.out.println("Option 2");
-};;Correct ?;;Yes;;No;;No;;Requires "breaks;"
-
-
-
-q8-2a
-
-
-
-
-
-
-
-
+;; ;;while(booleanVariable == true){;;......;;};; ;; ;;Correct ?;;Yes;;No;;Yes
+;;;;for(break;){;;......;;};;;;;;Correct ?;;Yes;;No;;No
+;;;;for(int i =0;i< 6;i--){;;......;;};;;;;;Correct ?;;Yes;;No;;Yes
+;;;;;;do while(i<6);;;;;;;;;Correct ?;;Yes;;No;;No
+;;;;if{;;i = i +2;;;};;;;;;Correct ?;;Yes;;No;;No
+if(j<k){;;....;;}else if(k==j){;;....;;}else{;;...;;};;Correct ?;;Yes;;No;;Yes
+switch(intergerVarable){;;case 1: System.out.println("Option 1");;;break;;;case 2: System.out.println("Option 2");;;break;};;;;Correct ?;;Yes;;No;;Yes
+if(i>0){;;......;;}else{;;......;;}else{;;.....;;};;;;Correct ?;;Yes;;No;;No
+;;;;switch(intergerVarable){;;break;;;};;;;;;Correct ?;;Yes;;No;;No
+;;;;while(variable = 5);;......;;};;;;;;Correct ?;;Yes;;No;;No;;Missing {
+;;for(int i =0;i< 6;i++){;; while(i<3){;;  System.out.println("Variable i is below 3");;; };;};;;;Correct ?;;Yes;;No;;Yes
+;;switch(stringVarable){;;case "one": System.out.println("Option 1");;;break;;;case "two": System.out.println("Option 2");;;break;};;;;Correct ?;;Yes;;No;;Yes
+;;;;do{;;i = i +2;;;}while(i<6);;;;;Correct ?;;Yes;;No;;Yes
+;;;;do{;;i = i +2;;;}while;;;;;;;Correct ?;;Yes;;No;;No;;While requires () with expression
+;;;;if(variableString.equals(inputString)){;;break;;;};;;;;;Correct ?;;Yes;;No;;Yes
+;;;;for{;;......;;};;;;;;Correct ?;;Yes;;No;;No;;Requires (....) with expression
+;;;;while(i<10{;;......;;};;;;;;Correct ?;;Yes;;No;;No;;Missing )
+;;switch(){;;case 1: System.out.println("Option 1");;;break;;;case 2: System.out.println("Option 2");;;break;};;;;Correct ?;;Yes;;No;;No
+;;;;for(int i =0;i< 6;i++){;;......;;};;;;;;Correct ?;;Yes;;No;;Yes
+;;;;;;if(variableString.equals(inputString));;;;;;;;Correct ?;;Yes;;No;;No
+;;;;switch(intergerVarable){;;case 1: System.out.println("Option 1");;;case 2: System.out.println("Option 2");;;};;;;Correct ?;;Yes;;No;;No

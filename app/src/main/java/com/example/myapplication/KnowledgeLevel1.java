@@ -17,4 +17,6 @@ class KnowledgeLevel1 extends Fragment {
         // Get the layout for the first knowledge Fragment
         return inflater.inflate(R.layout.fragment_knowledge_level1, container, false);
     }
+
+
 }

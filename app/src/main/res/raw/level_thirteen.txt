@@ -1,4 +1,4 @@
-Polymorphism
+
 
 What other concept in oop concept allows for Polymorphism?;;Inheritance
 

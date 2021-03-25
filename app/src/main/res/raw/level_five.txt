@@ -17,13 +17,11 @@ i = i +2;
 };;Correct ?;;Yes;;No;;No;;if requires (expression)
 
 if(j<k){
- System.out.println("j is less than k's value");
- j++;
+....
 }else if(k==j){
-  System.out.println("j is equal too k's value");
-  j++;
+ ....
 }else{
-  System.out.println("j is greater than k's value");
+ ...
 };;Correct ?;;Yes;;No;;Yes
 
 switch(intergerVarable){
@@ -33,11 +31,11 @@ case 2: System.out.println("Option 2");
 break;};;Correct ?;;Yes;;No;;Yes
 
 if(i>0){
- System.out.println("j is greater than k's value");
+......
 }else{
-  j++;
+......
 }else{
-  k++;
+.....
 };;Correct ?;;Yes;;No;;No;;Can not have two elses requires one to be a else if
 
 switch(intergerVarable){
@@ -99,7 +97,7 @@ case 2: System.out.println("Option 2");
 
 
 
-
+q8-2a
 
 
 

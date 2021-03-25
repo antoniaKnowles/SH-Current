@@ -1,4 +1,4 @@
-Encapsulation
+
 
 What is not a step to establish encapulation?;;private varables ;;getters;;setters
 benifits of encapulation?;;read/write only fields of class;;a class can have total control of its fields;;easier debugging

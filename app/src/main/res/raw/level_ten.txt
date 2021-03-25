@@ -1,5 +1,5 @@
 
-Inheritance
+
 
 sub class inherates the methods in super class what type of inheratance is this ?;;Single level
 what is when a instance of a nother class is declared in a diffrent class and a method is used from the objects class;;Single level

@@ -1,24 +1,15 @@
-What explanation fits;; a WHILE loop?;;-
-What explanation fits;; a FOR loop?;;-
-What explanation fits;; a DO...While loop?;;-
-What explanation fits;; a BREAk?;;--
-What explanation fits;; IF statments?;;-
-What explanation fits;; switch statment?;;-
-What explanation fits;; IF....ELSE statments?;;-
+
+What recursion method suit the expression;; (i < 5);;WHILE loop;;BREAk;;FOR loop;;switch statment;;WHILE loop
+What recursion method suit the expression;; (int i = 0; i < 4; i++);;FOR loop;;BREAk;;Switch statment;;FOR loop
+What recursion method suit the expression;; (name);;FOR;;If;;Switch;;While;;Switch
+Who do you end a recursion method;; from within it ?;;Switch;;While ;;BREAK;;While;;BREAK
+What recursion method suit the expression;; (i>20);;break;;For;;IF;;switch;;If
+What recursion method suit the expression;; (j<20) or (j>30);;IF..Else;;If;;Switch;;Break;;IF..Else
 
 
 
-while loop - until condition is true
-
-What recursion method fits;; (i < 5);;WHILE loop;;BREAk;;FOR loop;;switch statment;;WHILE loop
-What recursion method fits;; (int i = 0; i < 4; i++);;a FOR loop;;BREAk;;Switch statment;;
 
 
 
-(name);;switch statment
-(i>20)IF statments
-(j<20) or (j>30) IF....ELSE statments
-increas i until (i>=4)
-how to end a loop ;;
 
 q2-a4

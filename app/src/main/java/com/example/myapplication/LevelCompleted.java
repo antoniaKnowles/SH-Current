@@ -18,7 +18,7 @@ public class LevelCompleted extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Get the layout for this SecondFragment
-        return inflater.inflate(R.layout.fragment_level_passed, container, false);
+        return inflater.inflate(R.layout.fragment_level_completed, container, false);
     }
 
 
@@ -41,7 +41,7 @@ public class LevelCompleted extends Fragment {
             }
         });
 
-        view.findViewById(R.id.button_levelPassed_Continue).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.button_levelComplete_Continue).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                MainActivity.resetLevel();

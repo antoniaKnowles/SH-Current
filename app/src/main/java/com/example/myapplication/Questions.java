@@ -8,32 +8,66 @@ public class Questions extends Fragment {
 
     public  ArrayList<String> QuestionPt1 = new ArrayList<>();
     public  ArrayList<String> QuestionPt2 = new ArrayList<>();
+    public  ArrayList<String> QuestionPt3 = new ArrayList<>();
+    public  ArrayList<String> QuestionPt4 = new ArrayList<>();
+    public  ArrayList<String> QuestionPt5 = new ArrayList<>();
+    public  ArrayList<String> QuestionPt6 = new ArrayList<>();
+    public  ArrayList<String> QuestionPt7 = new ArrayList<>();
+    public  ArrayList<String> QuestionPt8 = new ArrayList<>();
     public  ArrayList<ArrayList<String>> choice = new ArrayList<>();
     public  ArrayList<String> answer = new ArrayList<>();
     public ArrayList<String> Input;
+    public int level = 0;
 
 
     public  void ReadFilesOne() {
 
 
        Input =  MainActivity.getInput();//Gets the input of strings for each question
+         level = MainActivity.getlevel();
 
         for (String line : Input) {//for each in the array list of questions
 
             String[] linePart = line.split(";;");//split the line up
+             int count = 0;//counts the parts in the line
 
-            QuestionPt1.add(linePart[0]);//Context of Question
-            QuestionPt2.add(linePart[1]);//Item of Question
-
+            QuestionPt1.add(linePart[count]);//Context of Question
+            count++;
+            QuestionPt2.add(linePart[count]);//Item of Question
+            count++;
+             if((level ==5)||(level ==14)||(level ==6)||(level ==9)) {
+                 QuestionPt3.add(linePart[count]);//Item of Question
+                 count++;
+                 QuestionPt4.add(linePart[count]);//Item of Question
+                 count++;
+                 QuestionPt5.add(linePart[count]);//Item of Question
+                 count++;
+                 QuestionPt6.add(linePart[count]);//Item of Question
+                 count++;
+                 QuestionPt7.add(linePart[count]);//Item of Question
+                 count++;
+                 QuestionPt8.add(linePart[count]);//Item of Question
+                 count++;
+             }
             ArrayList<String> options = new ArrayList<>();
-            //Saving the possible options for the answers of the questions in Array list
-            options.add(linePart[2]);
-            options.add(linePart[3]);
-            options.add(linePart[4]);
-            options.add(linePart[5]);
+
+
+            //change what is in line part to i and ++
+            if((level!=14)||(level!=9) ){
+                options.add(linePart[count]);
+                count++;
+                options.add(linePart[count]);
+                count++;
+            }
+            if((level==7)||(level==11)||(level==10)||(level==3)||(level==1)||(level==2)) {
+                options.add(linePart[count]);
+                count++;
+                options.add(linePart[count]);
+                count++;
+            }
             choice.add(options);
 
-            answer.add(linePart[6]);//Saves the answer of each question
+            answer.add(linePart[count]);//Saves the answer of each question
         }
 
     }
@@ -46,6 +80,32 @@ public class Questions extends Fragment {
 
     public   String getQuestion2(int a){//Returns the Question Item
         String q = QuestionPt2.get(a);
+        return q;
+    }
+
+    public   String getQuestion3(int a){//Returns the Question Item
+        String q = QuestionPt3.get(a);
+        return q;
+    }
+
+    public   String getQuestion4(int a){//Returns the Question Item
+        String q = QuestionPt4.get(a);
+        return q;
+    }
+    public   String getQuestion5(int a){//Returns the Question Item
+        String q = QuestionPt5.get(a);
+        return q;
+    }
+    public   String getQuestion6(int a){//Returns the Question Item
+        String q = QuestionPt6.get(a);
+        return q;
+    }
+    public   String getQuestion7(int a){//Returns the Question Item
+        String q = QuestionPt7.get(a);
+        return q;
+    }
+    public   String getQuestion8(int a){//Returns the Question Item
+        String q = QuestionPt8.get(a);
         return q;
     }
 

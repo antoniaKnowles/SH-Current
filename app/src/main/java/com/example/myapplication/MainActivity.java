@@ -14,15 +14,66 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static int mQuestionNumber = 0;
+    public static int level = 1;
     public static String ansCurrent ="";
    // public static ArrayList<ArrayList<String> >ReadInFIle = new ArrayList<ArrayList<String>>();
     public static ArrayList<String> arr = new ArrayList<String>();
+    public static ArrayList<Integer> IncorrectQuestionNumber = new ArrayList<Integer>();
+    public static ArrayList<ArrayList<Integer>> IncorrectQuestionNumberStore = new ArrayList<ArrayList<Integer>>();
+    public static int[][] LevelSize = new int[14][2];
+    public static int[] LevelQuestion = new int[14];
+    public static ArrayList<Integer> LevelsPass = new ArrayList<Integer>();
+    public static int questionsaskedCount = 0;
 
-
-    public static ArrayList<String> getInput() {
+    public static ArrayList<String> getInput() {//needs to return diffrent array for every level
 
        // return ReadInFIle.get(i);//return the input questions in format of strings for each separate question
+        //if 1
+        //if 2
+       // LevelSize[level][1] = arr.size();//number of question for this level
+      //  LevelSize[level][2] = (arr.size()/2);//number of question for this level
+        //maybe new method to check if level is passed
         return arr;
+    }
+
+    public static void resetLevel() {
+        mQuestionNumber = 0;
+    }
+
+    public static void newLevel(int i) {
+         IncorrectQuestionNumberStore.add(level,IncorrectQuestionNumber);
+         IncorrectQuestionNumber.clear();
+
+         LevelQuestion[level]= mQuestionNumber;
+         mQuestionNumber =0;
+
+        level = i;
+        passedLevel(level);
+
+    }
+    public static boolean checkPassed(int i) {
+         if(LevelsPass.contains(i)){
+             return true;
+         }
+
+        return false;
+    }
+
+
+    public static void passedLevel(int newlevel) {
+        if(!LevelsPass.contains(newlevel)) {
+            LevelsPass.add(newlevel);
+        }
+    }
+
+    public static void getOldLevel(int newLevel) {
+        IncorrectQuestionNumber = IncorrectQuestionNumberStore.get(newLevel);
+       IncorrectQuestionNumberStore.remove(newLevel);
+
+        mQuestionNumber = LevelQuestion[level];
+
+        level = newLevel;
+
     }
 
     public static void addQuestionNumber() {
@@ -32,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static int getQuestionNumber() {
+
+        questionsaskedCount++;
+
+        if((questionsaskedCount > arr.size())&&(!IncorrectQuestionNumber.isEmpty())) {
+             int newQuestionNum  = IncorrectQuestionNumber.get(0);
+             IncorrectQuestionNumber.remove(0);
+             return  newQuestionNum;
+        }
 
         return mQuestionNumber;// returns the current question index
     }
@@ -45,15 +104,34 @@ public class MainActivity extends AppCompatActivity {
         ansCurrent = mAnswer;// receives the current answer from where the string is split
     }
 
+    public static int getlevel() {
+        return level;//here
+    }
+
+
+
+    public static void addIncorrect() {
+       IncorrectQuestionNumber.add(mQuestionNumber);
+
+    }
+
+
+    public static String checkCompleted() {
+        if((arr.size()==(mQuestionNumber+1)) && (IncorrectQuestionNumber.size() == 0)){
+            return "Complete";
+        }else if ((arr.size()/2)==mQuestionNumber){
+            return "Pass";
+        }
+        return null;
+    }
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        //ArrayList<String> files = new ArrayList<String>();
-        //files.add("R.raw.level_one");
 
-       // for(int i =0;i< files.size();i++) {
 
             String str = "";
             InputStream is = this.getResources().openRawResource(R.raw.level_one);//gets the path to the files storing the Questions
@@ -77,9 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-           // ReadInFIle.add(arr);
 
-      //  }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

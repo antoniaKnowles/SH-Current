@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".SecondFragmentTwo">
+
+
+    <TextView
+        android:id="@+id/textview_second_1_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="12dp"
+        android:text="question -Line1"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_second_2_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="68dp"
+        android:text="question -Line2"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_second_3_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="100dp"
+        android:text="question -Line3"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_4_two"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textview_second_4_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="148dp"
+        android:text="question -Line4"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_5_two"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textview_second_5_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="204dp"
+        android:text="question -Line5"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_6_two"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textview_second_8_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="400dp"
+        android:text="question -Line8"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_second_7_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="312dp"
+        android:text="question -Line7"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_8_two"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textview_second_6_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="260dp"
+        android:text="question -Line6"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_7_two"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_one_two"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="144dp"
+        android:text="one"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_two_two"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:text="two"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_one_two"
+        app:layout_constraintVertical_bias="0.269" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="59dp"
+        android:layout_height="57dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_home_24"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_help"
+        android:layout_width="64dp"
+        android:layout_height="57dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_help_24"
+        app:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

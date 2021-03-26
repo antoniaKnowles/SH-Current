@@ -10,15 +10,15 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-public class ThirdFragment extends Fragment {
+public class ThirdFragmentTwo extends Fragment {
 
 
     public TextView Ans;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-      // Get the layout for this SecondFragment
-        return inflater.inflate(R.layout.fragment_third, container, false);
+        // Get the layout for this SecondFragment
+        return inflater.inflate(R.layout.fragment_third_two, container, false);
     }
 
 
@@ -35,20 +35,19 @@ public class ThirdFragment extends Fragment {
             public void onClick(View view) {
 
 
-                NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_thirdFragment_to_FirstFragment);
+                NavHostFragment.findNavController(ThirdFragmentTwo.this)
+                        .navigate(R.id.action_thirdFragmentTwo_to_FirstFragment);
 
 
             }
         });
 
-        view.findViewById(R.id.button_third).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.button_third_two).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 MainActivity.addQuestionNumber();
-                NavHostFragment.findNavController(ThirdFragment.this)
-                        .navigate(R.id.action_thirdFragment_to_SecondFragment);
+                NavHostFragment.findNavController(ThirdFragmentTwo.this)
+                        .navigate(R.id.action_thirdFragmentTwo_to_secondFragmentTwo);
             }
         });
     }

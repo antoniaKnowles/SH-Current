@@ -6,8 +6,6 @@
     app:startDestination="@id/FirstFragment">
 
 
-
-
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.myapplication.FirstFragment"
@@ -20,6 +18,12 @@
         <action
             android:id="@+id/action_FirstFragment_to_knowledge"
             app:destination="@id/knowledge" />
+        <action
+            android:id="@+id/action_FirstFragment_to_secondFragmentTwo"
+            app:destination="@id/secondFragmentTwo" />
+        <action
+            android:id="@+id/action_FirstFragment_to_secondFragmentThree"
+            app:destination="@id/secondFragmentThree" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -38,6 +42,12 @@
         <action
             android:id="@+id/action_SecondFragment_to_knowledge"
             app:destination="@id/knowledge" />
+        <action
+            android:id="@+id/action_SecondFragment_to_levelPassed"
+            app:destination="@id/levelPassed" />
+        <action
+            android:id="@+id/action_SecondFragment_to_levelCompleted"
+            app:destination="@id/levelCompleted" />
 
     </fragment>
     <fragment
@@ -72,5 +82,104 @@
         <action
             android:id="@+id/action_knowledgeLevel1_to_knowledge"
             app:destination="@id/knowledge" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragmentTwo"
+        android:name="com.example.myapplication.SecondFragmentTwo"
+        android:label="fragment_second_two"
+        tools:layout="@layout/fragment_second_two" >
+        <action
+            android:id="@+id/action_secondFragmentTwo_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_secondFragmentTwo_to_knowledge"
+            app:destination="@id/knowledge" />
+        <action
+            android:id="@+id/action_secondFragmentTwo_self"
+            app:destination="@id/secondFragmentTwo" />
+        <action
+            android:id="@+id/action_secondFragmentTwo_to_thirdFragmentTwo"
+            app:destination="@id/thirdFragmentTwo" />
+        <action
+            android:id="@+id/action_secondFragmentTwo_to_knowledge2"
+            app:destination="@id/knowledge" />
+        <action
+            android:id="@+id/action_secondFragmentTwo_to_levelCompleted"
+            app:destination="@id/levelCompleted" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragmentTwo"
+        android:name="com.example.myapplication.ThirdFragmentTwo"
+        android:label="fragment_third_two"
+        tools:layout="@layout/fragment_third_two" >
+        <action
+            android:id="@+id/action_thirdFragmentTwo_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_thirdFragmentTwo_to_secondFragmentTwo"
+            app:destination="@id/secondFragmentTwo" />
+        <action
+            android:id="@+id/action_thirdFragmentTwo_to_FirstFragment2"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragmentThree"
+        android:name="com.example.myapplication.SecondFragmentThree"
+        android:label="fragment_second_three"
+        tools:layout="@layout/fragment_second_three" >
+        <action
+            android:id="@+id/action_secondFragmentThree_to_thirdFragmentThree"
+            app:destination="@id/thirdFragmentThird" />
+        <action
+            android:id="@+id/action_secondFragmentThree_to_knowledge"
+            app:destination="@id/knowledge" />
+        <action
+            android:id="@+id/action_secondFragmentThree_self"
+            app:destination="@id/secondFragmentThree" />
+        <action
+            android:id="@+id/action_secondFragmentThree_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_secondFragmentThree_to_levelCompleted"
+            app:destination="@id/levelCompleted" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragmentThird"
+        android:name="com.example.myapplication.ThirdFragmentThree"
+        android:label="fragment_third_third"
+        tools:layout="@layout/fragment_third_three" >
+        <action
+            android:id="@+id/action_thirdFragmentThird_to_secondFragmentThree"
+            app:destination="@id/secondFragmentThree" />
+        <action
+            android:id="@+id/action_thirdFragmentThird_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelPassed"
+        android:name="com.example.myapplication.LevelPassed"
+        android:label="fragment_level_passed"
+        tools:layout="@layout/fragment_level_passed" >
+        <action
+            android:id="@+id/action_levelPassed_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_levelPassed_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_levelPassed_to_secondFragmentThree"
+            app:destination="@id/secondFragmentThree" />
+        <action
+            android:id="@+id/action_levelPassed_to_secondFragmentTwo"
+            app:destination="@id/secondFragmentTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelCompleted"
+        android:name="com.example.myapplication.LevelCompleted"
+        android:label="fragment_level_completed"
+        tools:layout="@layout/fragment_level_completed" >
+        <action
+            android:id="@+id/action_levelCompleted_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

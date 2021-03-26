@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,16 +81,14 @@ public class SecondFragment extends Fragment {
 
                 if (mButtonChoice4.getText().equals(mAnswer)) {
 
-                    MainActivity.addQuestionNumber();
 
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_self);
+
+                    correct();
 
                 }else{
 
+                   Incorrect();
 
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_to_thirdFragment);
 
                 }
 
@@ -103,18 +102,11 @@ public class SecondFragment extends Fragment {
 
                 if (mButtonChoice3.getText().equals(mAnswer)) {
 
-                    MainActivity.addQuestionNumber();
-
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_self);
+                    correct();
 
                 }else{
 
-
-
-
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_to_thirdFragment);
+                    Incorrect();
 
                 }
 
@@ -129,14 +121,10 @@ public class SecondFragment extends Fragment {
 
                 if (mButtonChoice2.getText().equals(mAnswer)) {
 
-                    MainActivity.addQuestionNumber();
-
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_self);
+                    correct();
 
                 }else{
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_to_thirdFragment);
+                    Incorrect();
                 }
 
 
@@ -152,16 +140,14 @@ public class SecondFragment extends Fragment {
 
                 if (mButtonChoice1.getText().equals(mAnswer)) {
 
-                    MainActivity.addQuestionNumber();
+                  correct();
 
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_self);
+
 
                 }else{
 
 
-                    NavHostFragment.findNavController(SecondFragment.this)
-                            .navigate(R.id.action_SecondFragment_to_thirdFragment);
+                  Incorrect();
 
                 }
 
@@ -184,7 +170,25 @@ public class SecondFragment extends Fragment {
 
     }
 
+   private void correct(){
+       if( MainActivity.checkCompleted() == "Pass"){
+           NavHostFragment.findNavController(SecondFragment.this).navigate(R.id.action_SecondFragment_to_levelPassed);
 
+       }else if( MainActivity.checkCompleted() == "Complete"){
+           NavHostFragment.findNavController(SecondFragment.this).navigate(R.id.action_SecondFragment_to_levelCompleted);
+
+       }else{
+           MainActivity.addQuestionNumber();
+           NavHostFragment.findNavController(SecondFragment.this).navigate(R.id.action_SecondFragment_self);
+       }
+   }
+
+    private void Incorrect(){
+
+        MainActivity.addIncorrect();
+        NavHostFragment.findNavController(SecondFragment.this)
+                .navigate(R.id.action_SecondFragment_to_thirdFragment);
+    }
 
 
 }

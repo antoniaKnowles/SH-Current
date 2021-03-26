@@ -8,22 +8,3 @@ Main Obj = new Main();;;Explanation?;;Object of Main Class;;Main Class;;Object o
 Obj.score = 10;;;Explanation ?;;Sets score in the object class to 10;; sets object to 10;;Sets score in the object class to 10
 Does methods contain classes?;;Yes;;No;;No
 Does classes contains methods?;;Yes;;No;;Yes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

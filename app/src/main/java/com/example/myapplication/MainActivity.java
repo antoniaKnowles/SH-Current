@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         mQuestionNumber = 0;
     }
 
+
+
     public static void newLevel(int i) {
          IncorrectQuestionNumberStore.add(level,IncorrectQuestionNumber);
          IncorrectQuestionNumber.clear();
@@ -117,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static String checkCompleted() {
-        if((arr.size()==(mQuestionNumber+1)) && (IncorrectQuestionNumber.size() == 0)){
+        if((arr.size()<=(mQuestionNumber+1)) && (IncorrectQuestionNumber.size() == 0)){
             return "Complete";
         }else if ((arr.size()/2)==mQuestionNumber){
             return "Pass";

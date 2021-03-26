@@ -54,6 +54,7 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_knowledge);
@@ -66,6 +67,7 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(SecondFragment.this)
                         .navigate(R.id.action_SecondFragment_to_FirstFragment);

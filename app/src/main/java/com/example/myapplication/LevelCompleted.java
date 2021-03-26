@@ -35,7 +35,7 @@ public class LevelCompleted extends Fragment {
 
 
                 NavHostFragment.findNavController(LevelCompleted.this)
-                        .navigate(R.id.action_levelPassed_to_FirstFragment);
+                        .navigate(R.id.action_levelCompleted_to_FirstFragment);
 
 
             }

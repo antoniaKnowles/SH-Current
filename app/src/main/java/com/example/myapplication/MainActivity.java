@@ -159,9 +159,16 @@ public class MainActivity extends AppCompatActivity {
         ReadInNames.add(R.raw.level_two);
         ReadInNames.add(R.raw.level_three);
         ReadInNames.add(R.raw.level_four);
+        ReadInNames.add(R.raw.level_five);
+        ReadInNames.add(R.raw.level_six);
         ReadInNames.add(R.raw.level_seven);
+        ReadInNames.add(R.raw.level_eight);
+        ReadInNames.add(R.raw.level_nine);
         ReadInNames.add(R.raw.level_ten);
         ReadInNames.add(R.raw.level_eleven);
+        ReadInNames.add(R.raw.level_twelve);
+        ReadInNames.add(R.raw.level_thirteen);
+        ReadInNames.add(R.raw.level_fourteen);
 
 
 

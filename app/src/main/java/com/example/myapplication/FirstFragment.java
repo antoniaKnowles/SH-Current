@@ -48,34 +48,34 @@ public class FirstFragment extends Fragment {
         button4.setEnabled(true);
 
         button5 =  (Button) view.findViewById(R.id.button_level5);
-        button5.setEnabled(MainActivity.checkPassed(5));
+        button5.setEnabled(true);
 
         button6 =  (Button) view.findViewById(R.id.button_level6);
-        button6.setEnabled(MainActivity.checkPassed(6));
+        button6.setEnabled(true);
 
         button7 =  (Button) view.findViewById(R.id.button_level7);
-        button7.setEnabled(MainActivity.checkPassed(7));
+        button7.setEnabled(true);
 
         button8 =  (Button) view.findViewById(R.id.button_level8);
-        button8.setEnabled(MainActivity.checkPassed(8));
+        button8.setEnabled(true);
 
         button9 =  (Button) view.findViewById(R.id.button_level9);
-        button9.setEnabled(MainActivity.checkPassed(9));
+        button9.setEnabled(true);
 
         button10 =  (Button) view.findViewById(R.id.button_level10);
-        button10.setEnabled(MainActivity.checkPassed(10));
+        button10.setEnabled(true);
 
         button11 =  (Button) view.findViewById(R.id.button_level11);
-        button11.setEnabled(MainActivity.checkPassed(11));
+        button11.setEnabled(true);
 
         button12 =  (Button) view.findViewById(R.id.button_level12);
-        button12.setEnabled(MainActivity.checkPassed(12));
+        button12.setEnabled(true);
 
         button13 =  (Button) view.findViewById(R.id.button_level13);
-        button13.setEnabled(MainActivity.checkPassed(13));
+        button13.setEnabled(true);
 
         button14 =  (Button) view.findViewById(R.id.button_level14);
-        button14.setEnabled(MainActivity.checkPassed(14));
+        button14.setEnabled(true);
 
 
         view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
@@ -131,7 +131,7 @@ public class FirstFragment extends Fragment {
 
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
 
             }
         });
@@ -144,7 +144,7 @@ public class FirstFragment extends Fragment {
 
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
 
             }
         });
@@ -157,7 +157,7 @@ public class FirstFragment extends Fragment {
 
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
 
             }
         });
@@ -181,7 +181,7 @@ public class FirstFragment extends Fragment {
                 selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
 
             }
         });
@@ -219,7 +219,7 @@ public class FirstFragment extends Fragment {
                 selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
 
             }
         });
@@ -231,7 +231,7 @@ public class FirstFragment extends Fragment {
                 selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
 
             }
         });

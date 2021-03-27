@@ -33,6 +33,7 @@ public class LevelPassed extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(LevelPassed.this)
                         .navigate(R.id.action_levelPassed_to_FirstFragment);
@@ -45,6 +46,7 @@ public class LevelPassed extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(LevelPassed.this)
                         .navigate(R.id.action_levelPassed_to_FirstFragment);

@@ -16,12 +16,11 @@ public class MainActivity extends AppCompatActivity {
     public static int mQuestionNumber = 0;
     public static int level = 1;
     public static String ansCurrent ="";
-   // public static ArrayList<ArrayList<String> >ReadInFIle = new ArrayList<ArrayList<String>>();
+
     public static ArrayList<String> arr = new ArrayList<String>();
     public static ArrayList<Integer> IncorrectQuestionNumber = new ArrayList<Integer>();
     public static ArrayList<ArrayList<Integer>> IncorrectQuestionNumberStore = new ArrayList<ArrayList<Integer>>();
-    public static int[][] LevelSize = new int[14][2];
-    public static int[] LevelQuestion = new int[14];
+    public static int[] LevelQuestion = new int[15];
     public static ArrayList<Integer> LevelsPass = new ArrayList<Integer>();
     public static int questionsaskedCount = 0;
 

@@ -1,4 +1,4 @@
-Which is not a type of modifier?;; ;;Public;;Private;;Method;;Final;;Method
+Which is not a type of  ?;; ;;Public;;Private;;Method;;Final;;Method
 What defines access type of;; the method?;;Modifiers;;Names;;Parameter;;Modifiers
 What is a non access modifier?;; ;;Private;;Protected;;Static;;Variables;;Static
 Which Modifier only allows for;; class access?;;Private ;;Public ;;Void ;;Final ;;Private

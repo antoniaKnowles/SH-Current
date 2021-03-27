@@ -33,6 +33,7 @@ public class LevelCompleted extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.resetLevel();
 
                 NavHostFragment.findNavController(LevelCompleted.this)
                         .navigate(R.id.action_levelCompleted_to_FirstFragment);

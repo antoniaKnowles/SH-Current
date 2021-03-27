@@ -81,6 +81,8 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                //check if pervios have been played if do pull
+
                  MainActivity.passedLevel(1);
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
@@ -92,8 +94,8 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-
-                MainActivity.newLevel(2);
+                //check if pervios have been played if do pull
+               // MainActivity.newLevel(2);
               //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);

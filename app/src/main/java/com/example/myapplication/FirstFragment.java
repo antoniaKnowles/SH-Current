@@ -93,7 +93,10 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level2).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-
+                MainActivity.setlevel(2);
+                MainActivity.getOldLevel(2);
+                MainActivity.passedLevel(2);
+                 //change qestions to second level
                 //check if pervios have been played if do pull
                // MainActivity.newLevel(2);
               //  MainActivity.readIn2();

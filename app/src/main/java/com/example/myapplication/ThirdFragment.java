@@ -24,7 +24,7 @@ public class ThirdFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        MainActivity.addQuestionNumber();
+        //MainActivity.addQuestionNumber();
 
 
         Ans = (TextView)view.findViewById(R.id.incorect_Ans);
@@ -33,7 +33,7 @@ public class ThirdFragment extends Fragment {
         view.findViewById(R.id.floatingActionButton3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                MainActivity.addQuestionNumber();
                 MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(ThirdFragment.this)
@@ -46,7 +46,7 @@ public class ThirdFragment extends Fragment {
         view.findViewById(R.id.button_third).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                MainActivity.addQuestionNumber();
                 //MainActivity.addQuestionNumber();
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(R.id.action_thirdFragment_to_SecondFragment);

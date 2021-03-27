@@ -14,12 +14,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static int mQuestionNumber = 0;
+    public static int NumberReadIn = 0;
     public static int level = 1;
     public static String ansCurrent ="";
     public static int numberoflevel = 14;
     public static ArrayList<String> arr = new ArrayList<String>();
+    public static ArrayList<Integer> ReadInNames = new ArrayList<Integer>();
     public static ArrayList<Integer> IncorrectQuestionNumber = new ArrayList<Integer>();
     public static ArrayList<ArrayList<Integer>> IncorrectQuestionNumberStore = new ArrayList<ArrayList<Integer>>();
+    public static ArrayList<ArrayList<String>> ReadInFile = new ArrayList<ArrayList<String>>();
     public static int[] LevelQuestion = new int[15];
     public static ArrayList<Integer> LevelsPass = new ArrayList<Integer>();
     public static int questionsaskedCount = 0;
@@ -32,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
        // LevelSize[level][1] = arr.size();//number of question for this level
       //  LevelSize[level][2] = (arr.size()/2);//number of question for this level
         //maybe new method to check if level is passed
-        return arr;
+        return ReadInFile.get(level-1);
+       // return arr;
     }
 
     public static void resetLevel() {
@@ -99,10 +103,12 @@ public class MainActivity extends AppCompatActivity {
 
         questionsaskedCount++;
 
-        if((questionsaskedCount > arr.size())&&(!IncorrectQuestionNumber.isEmpty())) {
+        if((questionsaskedCount > ReadInFile.get(level-1).size())&&(!IncorrectQuestionNumber.isEmpty())) {
+            //.get(arr.size()
              int newQuestionNum  = IncorrectQuestionNumber.get(0);
              IncorrectQuestionNumber.remove(0);
              return  newQuestionNum;
+
         }
 
         return mQuestionNumber;// returns the current question index
@@ -120,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
     public static int getlevel() {
         return level;//here
     }
+    public static void setlevel(int i) {
+        level = i;//here
+    }
 
 
 
@@ -130,9 +139,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static String checkCompleted() {
-        if((arr.size()<=(mQuestionNumber+1)) && (IncorrectQuestionNumber.size() == 0)){
+
+        if((ReadInFile.get(level-1).size()<=(mQuestionNumber+1)) && (IncorrectQuestionNumber.size() == 0)){
+            //arr.size()
             return "Complete";
-        }else if (((arr.size()/2)+IncorrectQuestionNumber.size())==mQuestionNumber){
+        }else if ((((ReadInFile.get(level-1).size())/2)-1)==(mQuestionNumber-IncorrectQuestionNumber.size())){
             return "Pass";
         }
         return null;
@@ -144,14 +155,28 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        ReadInNames.add(R.raw.level_one);
+        ReadInNames.add(R.raw.level_two);
+        ReadInNames.add(R.raw.level_three);
+        ReadInNames.add(R.raw.level_seven);
+        ReadInNames.add(R.raw.level_ten);
+        ReadInNames.add(R.raw.level_eleven);
 
-            for(int i=0;i<numberoflevel;i++){
-                ArrayList<Integer> temp = new ArrayList<Integer>();
-                IncorrectQuestionNumberStore.add(temp);
-            }
+
+
+        for (int i = 0; i < numberoflevel; i++) {
+            ArrayList<Integer> temp = new ArrayList<Integer>();
+            IncorrectQuestionNumberStore.add(temp);
+            ArrayList<String> temp2 = new ArrayList<String>();
+            ReadInFile.add(temp2);
+        }
+
+
+        for (int i = 0; i < ReadInNames.size(); i++) {
+
 
             String str = "";
-            InputStream is = this.getResources().openRawResource(R.raw.level_one);//gets the path to the files storing the Questions
+            InputStream is = this.getResources().openRawResource(ReadInNames.get(i));//gets the path to the files storing the Questions
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));//Reads in the file
 
 
@@ -171,13 +196,20 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException e) {//catches the exception
                 e.printStackTrace();
             }
+            for (int j = 0; j < arr.size(); j++) {
+                ReadInFile.get(NumberReadIn).add(arr.get(j));
+            }
+            arr.clear();
+            NumberReadIn++;
+        }
 
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
 
-    }
+        }
+
 
 
 

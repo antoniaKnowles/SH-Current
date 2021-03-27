@@ -33,6 +33,8 @@ public class ThirdFragmentTwo extends Fragment {
         view.findViewById(R.id.floatingActionButton3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MainActivity.addQuestionNumber();
+                MainActivity.newLevel(MainActivity.getlevel());
 
 
                 NavHostFragment.findNavController(ThirdFragmentTwo.this)

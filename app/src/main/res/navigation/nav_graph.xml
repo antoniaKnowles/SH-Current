@@ -82,6 +82,9 @@
         <action
             android:id="@+id/action_knowledgeLevel1_to_knowledge"
             app:destination="@id/knowledge" />
+        <action
+            android:id="@+id/action_knowledgeLevel1_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragmentTwo"

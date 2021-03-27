@@ -63,6 +63,7 @@ public class SecondFragmentTwo extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(SecondFragmentTwo.this)
                         .navigate(R.id.action_secondFragmentTwo_to_knowledge);
@@ -75,6 +76,7 @@ public class SecondFragmentTwo extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(SecondFragmentTwo.this)
                         .navigate(R.id.action_secondFragmentTwo_to_FirstFragment);
@@ -93,14 +95,13 @@ public class SecondFragmentTwo extends Fragment {
 
                 if (mButtonChoice2.getText().equals(mAnswer)) {
 
-                    MainActivity.addQuestionNumber();
+                    correct();
 
-                    NavHostFragment.findNavController(SecondFragmentTwo.this)
-                            .navigate(R.id.action_secondFragmentTwo_self);
+
 
                 }else{
-                    NavHostFragment.findNavController(SecondFragmentTwo.this)
-                            .navigate(R.id.action_secondFragmentTwo_to_thirdFragmentTwo);
+                    Incorrect();
+
                 }
 
 
@@ -116,16 +117,16 @@ public class SecondFragmentTwo extends Fragment {
 
                 if (mButtonChoice1.getText().equals(mAnswer)) {
 
-                    MainActivity.addQuestionNumber();
+                    correct();
 
-                    NavHostFragment.findNavController(SecondFragmentTwo.this)
-                            .navigate(R.id.action_secondFragmentTwo_self);
+
 
                 }else{
 
+                    Incorrect();
 
-                    NavHostFragment.findNavController(SecondFragmentTwo.this)
-                            .navigate(R.id.action_secondFragmentTwo_to_thirdFragmentTwo);
+
+
 
                 }
 
@@ -153,6 +154,28 @@ public class SecondFragmentTwo extends Fragment {
 
     }
 
+    private void correct(){
+        if( MainActivity.checkCompleted() == "Pass"){
+            NavHostFragment.findNavController(SecondFragmentTwo.this).navigate(R.id.action_secondFragmentTwo_to_levelPassed);
+
+
+        }else if( MainActivity.checkCompleted() == "Complete"){
+            NavHostFragment.findNavController(SecondFragmentTwo.this).navigate(R.id.action_secondFragmentTwo_to_levelCompleted);
+
+        }else{
+            MainActivity.addQuestionNumber();
+            NavHostFragment.findNavController(SecondFragmentTwo.this)
+                    .navigate(R.id.action_secondFragmentTwo_self);
+        }
+    }
+
+    private void Incorrect(){
+
+        MainActivity.addIncorrect();
+
+        NavHostFragment.findNavController(SecondFragmentTwo.this)
+                .navigate(R.id.action_secondFragmentTwo_to_thirdFragmentTwo);
+    }
 
 
 

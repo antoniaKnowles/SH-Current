@@ -1,6 +1,6 @@
-What recursion method suit the expression;; (i < 5);;WHILE loop;;BREAk;;FOR loop;;switch statment;;WHILE loop
-What recursion method suit the expression;; (int i = 0; i < 4; i++);;FOR loop;;BREAk;;Switch statment;;FOR loop
-What recursion method suit the expression;; (name);;FOR;;If;;Switch;;While;;Switch
-Who do you end a recursion method;; from within it ?;;Switch;;While ;;BREAK;;While;;BREAK
-What recursion method suit the expression;; (i>20);;break;;For;;IF;;switch;;If
-What recursion method suit the expression;; (j<20) or (j>30);;IF..Else;;If;;Switch;;Break;;IF..Else
+What recursion method suit the expression;;(i < 5);;WHILE loop;;BREAk;;FOR loop;;Switch;;WHILE loop
+What recursion method suit the expression;;(int i = 0; i < 4; i++);;FOR loop;;BREAk;;Switch;;WHILE loop;;FOR loop
+What recursion method suit the expression;;(name);;FOR;;If;;Switch;;While;;Switch
+Who do you end a recursion method;;from within it ?;;Switch;;While;;BREAK;;If;;BREAK
+What recursion method suit the expression;;(i>20);;BREAK;;For;;IF;;switch;;IF
+What recursion method suit the expression;;(j<20) or (j>30);;IF..Else;;If;;Switch;;Break;;IF..Else

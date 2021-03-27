@@ -106,6 +106,9 @@
         <action
             android:id="@+id/action_secondFragmentTwo_to_levelCompleted"
             app:destination="@id/levelCompleted" />
+        <action
+            android:id="@+id/action_secondFragmentTwo_to_levelPassed"
+            app:destination="@id/levelPassed" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragmentTwo"
@@ -142,6 +145,9 @@
         <action
             android:id="@+id/action_secondFragmentThree_to_levelCompleted"
             app:destination="@id/levelCompleted" />
+        <action
+            android:id="@+id/action_secondFragmentThree_to_levelPassed"
+            app:destination="@id/levelPassed" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragmentThird"

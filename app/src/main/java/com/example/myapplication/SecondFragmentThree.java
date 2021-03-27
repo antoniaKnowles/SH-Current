@@ -52,6 +52,7 @@ public class SecondFragmentThree extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(SecondFragmentThree.this)
                         .navigate(R.id.action_secondFragmentThree_to_knowledge);
@@ -64,6 +65,7 @@ public class SecondFragmentThree extends Fragment {
             @Override
             public void onClick(View view) {
 
+                MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(SecondFragmentThree.this)
                         .navigate(R.id.action_secondFragmentThree_to_FirstFragment);
@@ -82,14 +84,13 @@ public class SecondFragmentThree extends Fragment {
 
                 if (mButtonChoice2.getText().equals(mAnswer)) {
 
-                    MainActivity.addQuestionNumber();
-
-                    NavHostFragment.findNavController(SecondFragmentThree.this)
-                            .navigate(R.id.action_secondFragmentTwo_self);
+                   // MainActivity.addQuestionNumber();
+correct();
+                   // NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentTwo_self);
 
                 }else{
-                    NavHostFragment.findNavController(SecondFragmentThree.this)
-                            .navigate(R.id.action_secondFragmentThree_to_thirdFragmentThree);
+                   // NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_to_thirdFragmentThree);
+               Incorrect();
                 }
 
 
@@ -104,17 +105,16 @@ public class SecondFragmentThree extends Fragment {
 
 
                 if (mButtonChoice1.getText().equals(mAnswer)) {
+                    correct();
 
-                    MainActivity.addQuestionNumber();
+                   // MainActivity.addQuestionNumber();
 
-                    NavHostFragment.findNavController(SecondFragmentThree.this)
-                            .navigate(R.id.action_secondFragmentThree_self);
+                   // NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_self);
 
                 }else{
+Incorrect();
 
-
-                    NavHostFragment.findNavController(SecondFragmentThree.this)
-                            .navigate(R.id.action_secondFragmentThree_to_thirdFragmentThree);
+                   // NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_to_thirdFragmentThree);
 
                 }
 
@@ -136,7 +136,26 @@ public class SecondFragmentThree extends Fragment {
 
     }
 
+    private void correct(){
+        if( MainActivity.checkCompleted() == "Pass"){
+            NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_to_levelPassed);
 
+        }else if( MainActivity.checkCompleted() == "Complete"){
+            NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_to_levelCompleted);
+
+        }else{
+            MainActivity.addQuestionNumber();
+            NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_self);
+        }
+    }
+
+    private void Incorrect(){
+
+        MainActivity.addIncorrect();
+
+        NavHostFragment.findNavController(SecondFragmentThree.this)
+                .navigate(R.id.action_secondFragmentThree_to_thirdFragmentThree);
+    }
 
 
 }

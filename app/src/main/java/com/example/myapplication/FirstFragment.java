@@ -25,6 +25,7 @@ public class FirstFragment extends Fragment {
     private Button button12;
     private Button button13;
     private Button button14;
+    private int level;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,13 +39,13 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         button2 =  (Button) view.findViewById(R.id.button_level2);
-        button2.setEnabled((MainActivity.checkPassed(2)));
+        button2.setEnabled(true);//(MainActivity.checkPassed(2))
 
         button3 =  (Button) view.findViewById(R.id.button_level3);
-        button3.setEnabled(MainActivity.checkPassed(3));
+        button3.setEnabled(true);
 
         button4 =  (Button) view.findViewById(R.id.button_level4);
-        button4.setEnabled(MainActivity.checkPassed(4));
+        button4.setEnabled(true);
 
         button5 =  (Button) view.findViewById(R.id.button_level5);
         button5.setEnabled(MainActivity.checkPassed(5));
@@ -80,10 +81,11 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-
+                level = 1;
+                selectionOfLevel(level);
                 //check if pervios have been played if do pull
-                 MainActivity.getOldLevel(1);
-                 MainActivity.passedLevel(1);
+                // MainActivity.getOldLevel(1);
+               //  MainActivity.passedLevel(1);
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
 
@@ -93,9 +95,9 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level2).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-                MainActivity.setlevel(2);
-                MainActivity.getOldLevel(2);
-                MainActivity.passedLevel(2);
+                level = 2;
+                selectionOfLevel(level);
+
                  //change qestions to second level
                 //check if pervios have been played if do pull
                // MainActivity.newLevel(2);
@@ -104,12 +106,16 @@ public class FirstFragment extends Fragment {
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
 
             }
+
+
         });
 
         view.findViewById(R.id.button_level3).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-                MainActivity.newLevel(3);
+                level = 3;
+                selectionOfLevel(level);
+
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
@@ -120,7 +126,9 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level4).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-                MainActivity.newLevel(4);
+                level= 4;
+                selectionOfLevel(level);
+
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
@@ -131,7 +139,9 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level5).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-              MainActivity.newLevel(5);
+                level=5;
+                selectionOfLevel(level);
+
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
@@ -142,7 +152,9 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level6).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-               MainActivity.newLevel(6);
+                level = 6;
+                selectionOfLevel(level);
+
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
@@ -153,7 +165,8 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level7).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-               MainActivity.newLevel(7);
+                level = 7;
+                selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
@@ -164,7 +177,8 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level8).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-              MainActivity.newLevel(8);
+                level = 8;
+                selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
@@ -176,7 +190,8 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level10).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-              MainActivity.newLevel(10);
+                level = 10;
+                selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
@@ -187,7 +202,8 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level11).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-               MainActivity.newLevel(11);
+                level = 11;
+                selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);
@@ -199,7 +215,8 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level12).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-                MainActivity.newLevel(12);
+                level = 12;
+                selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
@@ -210,7 +227,8 @@ public class FirstFragment extends Fragment {
         view.findViewById(R.id.button_level13).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
             @Override
             public void onClick(View view) {
-                MainActivity.newLevel(13);
+                level = 13;
+                selectionOfLevel(level);
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentTwo);
@@ -226,5 +244,11 @@ public class FirstFragment extends Fragment {
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_knowledge);
             }
         });
+    }
+
+    public void selectionOfLevel(int i){
+        MainActivity.setlevel(i);
+        MainActivity.getOldLevel(i);
+        MainActivity.passedLevel(i);
     }
 }

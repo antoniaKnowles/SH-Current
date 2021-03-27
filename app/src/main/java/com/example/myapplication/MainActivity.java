@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     public static int mQuestionNumber = 0;
     public static int level = 1;
     public static String ansCurrent ="";
-
+    public static int numberoflevel = 14;
     public static ArrayList<String> arr = new ArrayList<String>();
     public static ArrayList<Integer> IncorrectQuestionNumber = new ArrayList<Integer>();
     public static ArrayList<ArrayList<Integer>> IncorrectQuestionNumberStore = new ArrayList<ArrayList<Integer>>();
@@ -42,11 +42,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static void newLevel(int i) {
-         IncorrectQuestionNumberStore.add(level,IncorrectQuestionNumber);
-         IncorrectQuestionNumber.clear();
+        if(!IncorrectQuestionNumber.isEmpty()) {
+            for(int j = 0; j < IncorrectQuestionNumber.size(); j++) {
+                IncorrectQuestionNumberStore.get(i).add(IncorrectQuestionNumber.get(j));
 
-         LevelQuestion[level]= mQuestionNumber;
-         mQuestionNumber =0;
+            }
+            IncorrectQuestionNumber.clear();
+        }
+
+        if(mQuestionNumber != 0) {
+            LevelQuestion[level] = mQuestionNumber;
+            mQuestionNumber = 0;
+        }
 
         level = i;
         passedLevel(level);
@@ -68,11 +75,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void getOldLevel(int newLevel) {
-        IncorrectQuestionNumber = IncorrectQuestionNumberStore.get(newLevel);
-       IncorrectQuestionNumberStore.remove(newLevel);
+        if(IncorrectQuestionNumberStore.contains(newLevel)) {//might have to change this
+            for(int j = 0; j <IncorrectQuestionNumberStore.get(newLevel).size(); j++) {
+                IncorrectQuestionNumber.add(j);
 
-        mQuestionNumber = LevelQuestion[level];
-
+            }
+            IncorrectQuestionNumberStore.remove(newLevel);
+        }
+        if(LevelQuestion[level] != 0) {
+            mQuestionNumber = LevelQuestion[level];
+        }
         level = newLevel;
 
     }
@@ -120,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
     public static String checkCompleted() {
         if((arr.size()<=(mQuestionNumber+1)) && (IncorrectQuestionNumber.size() == 0)){
             return "Complete";
-        }else if ((arr.size()/2)==mQuestionNumber){
+        }else if (((arr.size()/2)+IncorrectQuestionNumber.size())==mQuestionNumber){
             return "Pass";
         }
         return null;
@@ -133,6 +145,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
+            for(int i=0;i<numberoflevel;i++){
+                ArrayList<Integer> temp = new ArrayList<Integer>();
+                IncorrectQuestionNumberStore.add(temp);
+            }
 
             String str = "";
             InputStream is = this.getResources().openRawResource(R.raw.level_one);//gets the path to the files storing the Questions

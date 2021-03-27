@@ -82,7 +82,7 @@ public class FirstFragment extends Fragment {
             public void onClick(View view) {
 
                 //check if pervios have been played if do pull
-
+                 MainActivity.getOldLevel(1);
                  MainActivity.passedLevel(1);
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment);

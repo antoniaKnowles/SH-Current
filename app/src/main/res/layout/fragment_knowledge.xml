@@ -1,123 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/background"
+tools:context=".Knowledge">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".Knowledge">
+    android:layout_height="wrap_content">
+
 
     <Button
         android:id="@+id/button_Knowledge2"
         android:layout_width="212dp"
         android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:enabled="false"
         android:text="Level 2"
         app:backgroundTint="@color/Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge" />
 
     <Button
         android:id="@+id/button_Knowledge3"
         android:layout_width="212dp"
         android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:enabled="false"
         android:text="Level 3"
         app:backgroundTint="@color/Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge2" />
 
     <Button
         android:id="@+id/button_Knowledge4"
         android:layout_width="212dp"
         android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+
+        android:enabled="false"
         android:text="Level 4"
         app:backgroundTint="@color/Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge3" />
 
     <Button
-        android:id="@+id/button_lKnowledge5"
+        android:id="@+id/button_Knowledge5"
         android:layout_width="212dp"
         android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
         android:text="Level 5"
         app:backgroundTint="@color/Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge4"
+        />
 
     <Button
         android:id="@+id/button_Knowledge6"
         android:layout_width="212dp"
         android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
         android:text="Level 6"
         app:backgroundTint="@color/Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge5"
+        />
 
-
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Please select a Area"
-        app:layout_constraintBottom_toTopOf="@id/button_Knowledge"
+    <Button
+        android:id="@+id/button_Knowledge7"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="Level 7"
+        app:backgroundTint="@color/Dark"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge6"
+        />
+
+    <Button
+        android:id="@+id/button_Knowledge8"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="Level 8"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge7"
+        />
+
+    <Button
+        android:id="@+id/button_Knowledge9"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="Level 9"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge8"
+        />
+
+    <Button
+        android:id="@+id/button_Knowledge10"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="Level 10"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge9"
+        />
+
+    <Button
+        android:id="@+id/button_Knowledge11"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="Level 11"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge10"
+        />
+
+    <Button
+        android:id="@+id/button_Knowledge12"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="Level 12"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge11"
+        />
+
+    <Button
+        android:id="@+id/button_Knowledge13"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="Level 13"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge12"
+        />
+
+
+    <Button
+        android:id="@+id/button_Knowledge14"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:layout_marginTop="32dp"
+        android:text="Level 14"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge13"
+        />
 
 
     <Button
         android:id="@+id/button_Knowledge"
         android:layout_width="212dp"
         android:layout_height="48dp"
+        android:layout_marginTop="84dp"
+
         android:text="Level 1"
+
         app:backgroundTint="@color/Dark"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="59dp"
-        android:layout_height="57dp"
-        android:clickable="true"
-        android:src="@drawable/ic_baseline_home_24"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Knowledge for Levels"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
-
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

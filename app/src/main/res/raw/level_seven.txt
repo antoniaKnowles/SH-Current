@@ -1,16 +1,16 @@
-Which is not a type of  ?;; ;;Public;;Private;;Method;;Final;;Method
-What defines access type of;; the method?;;Modifiers;;Names;;Parameter;;Modifiers
+Which is not a type of ;;Modifier? ;;Public;;Private;;Method;;Final;;Method
+What defines access type of;; the method?;;Modifiers;;Names;;Parameter;;Encapsulation;;Modifiers
 What is a non access modifier?;; ;;Private;;Protected;;Static;;Variables;;Static
-Which Modifier only allows for;; class access?;;Private ;;Public ;;Void ;;Final ;;Private
-Which Modifiers only allows;; for access to everyone?;;Private ;;Public ;;Void ;;Final ;;;;Public
-What is used when the access control;; is not defined?;;;;Private ;;Public ;;Void ;;Final ;;;;Void
+Which Modifier only allows for;; class access?;;Private;;Public;;Void;;Final;;Private
+Which Modifiers only allows;; for access to everyone?;;Private;;Public;;Void;;Final;;Public
+What is used when the access control;; is not defined?;;Private;;Public;;Void;;Final;;Void
 What non-access modifier can be;; used to creating class methods?;;Private;;Static;;Public;;Final;;Static
-What non-access modifier finalizing;; the implementations of methods?;;Private;;Static;;Public;;Final ;;Final
-What is the name of a variable passed;; into a method when it is called?;;Modifier;; InVariable ;;Encapulation ;;Parameter ;;Parameter
+What non-access modifier finalizing;; the implementations of methods?;;Private;;Static;;Public;;Final;;Final
+What is the name of a variable passed;; into a method when it is called?;;Modifier;;InVariable;;Encapsulation;;Parameter;;Parameter
 Which can not be a return type?;; ;;String;;Void;;int;;Static;;Static
 Which is not included in;;creating a method?;;Name of Method;;Parameters;;Modifiers;;Operations;;Operations
 public static String addNameToList(int a, int b) {};;Is this method creation?;;Yes;;No-()must be empty;;No-remove static;;No-remove String;;Yes
-public calculate(int a, int b) {},Is this correct?;;No-remove public;;Yes;;No-requiresVoid;;No-()must be empty;;No-requiresVoid
-public int calculate(int a, int b) {},Is this correct?;;No-requires static;;Yes;;No-remove int;;No-()must be empty;;Yes
-public static void main(String[] args) { },Is this correct?;;No-remove void;;No-()must be empty;;Yes;;No-()cant contain a array;;Yes
+public calculate(int a, int b) {};;Is this correct?;;No-remove public;;Yes;;No-requiresVoid;;No-()must be empty;;No-requiresVoid
+public int calculate(int a, int b) {};;Is this correct?;;No-requires static;;Yes;;No-remove int;;No-()must be empty;;Yes
+public static void main(String[] args) { };;Is this correct?;;No-remove void;;No-()must be empty;;Yes;;No-()cant contain a array;;Yes
 What case is return statements;; are not requires?;;String;;char;;Void;;Boolean;;Void

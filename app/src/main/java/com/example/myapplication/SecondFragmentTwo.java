@@ -51,8 +51,8 @@ public class SecondFragmentTwo extends Fragment {
         mQuestion6View = (TextView) view.findViewById(R.id.textview_second_6_two);
         mQuestion7View = (TextView) view.findViewById(R.id.textview_second_7_two);
         mQuestion8View = (TextView) view.findViewById(R.id.textview_second_8_two);
-        mButtonChoice1 = (Button) view.findViewById(R.id.button_one);
-        mButtonChoice2 = (Button) view.findViewById(R.id.button_two);
+        mButtonChoice1 = (Button) view.findViewById(R.id.button_one_two);
+        mButtonChoice2 = (Button) view.findViewById(R.id.button_two_two);
 
 
         qLib.ReadFilesOne();

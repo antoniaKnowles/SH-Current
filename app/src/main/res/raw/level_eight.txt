@@ -3,8 +3,8 @@ What is not the method name in;; a class called Flower?;;Tree;;Petal;;Tree
 What is not the method name in;; a class called Camera?;;Lens;;Cup;;Cup
 What is not the method name in;; a class called Table?;;Wood;;Chair;;Chair
 public class Main { int x = 5;};; is this a Class declaration?;;Yes;;No;;Yes
-public class{ };; is this a Class declaration?;;Yes;;No;;No it requires identifier
+public class{ };; is this a Class declaration?;;Yes;;No;;No
 Main Obj = new Main();;;Explanation?;;Object of Main Class;;Main Class;;Object of Main Class
 Obj.score = 10;;;Explanation ?;;Sets score in the object class to 10;; sets object to 10;;Sets score in the object class to 10
-Does methods contain classes?;;Yes;;No;;No
-Does classes contains methods?;;Yes;;No;;Yes
+Do methods contain;; classes?;;Yes;;No;;No
+Do classes contain;; methods?;;Yes;;No;;Yes

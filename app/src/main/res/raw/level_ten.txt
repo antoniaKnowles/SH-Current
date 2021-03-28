@@ -1,8 +1,8 @@
 If one Sub Class inherits methods from Super Class;;what type of inheritance is this ?;;Single level;;Multi level;;Double level;;None of the above;;Single level
-When a instance of another class is declared in a class, then a method is used from the other class,;;what is it called?;;Encapsulation;;Inheritance;;Abstraction;;Polymorphism;;Inheritance
-public class Sub_class extends Super_class {},Is this code part of Inheritance?;;Yes;;No-replace extends;;No-remove class;;;No-remove Super_class;;;Yes
-public class Sub_class expand Super_class {}, Is this code part of Inheritance?;;Yes;;No-replace expands;;No-remove class;;;No-remove Super_class;;;No-replace expands
+When a instance of another class is declared in a class,;; then a method is used from the other class,what is it called?;;Encapsulation;;Inheritance;;Abstraction;;Polymorphism;;Inheritance
+public class Sub_class extends Super_class {};;Is this code part of Inheritance?;;Yes;;No-replace extends;;No-remove class;;No-remove Super_class;;Yes
+public class Sub_class expand Super_class {};; Is this code part of Inheritance?;;Yes;;No-replace expands;;No-remove class;;No-remove Super_class;;No-replace expands
 What type of inheritance is;; Super Class -> Sub Class -> Sub Class;;Single level;;Multi level;;Double level;;None of the above;;Multi level
-What type of inheritance is;; Super Class -> Sub Class inheritance;;Single level;;Multi level;;Double level;;None of the above;;;;Single level
+What type of inheritance is;; Super Class -> Sub Class inheritance;;Single level;;Multi level;;Double level;;None of the above;;Single level
 What type of inheritance uses repeated;; extends to one base class?;;Single level;;Double;;Hierarchical;;None of the above;;Hierarchical
 Whats the main benefit of ;;inheritance to the code?;;Re-usability;;Readability;;Simplicity;;Easier debugging;;Re-usability

@@ -4,13 +4,13 @@
 ;;;;;;do while(i<6);;;;;;;;;Correct ?;;Yes;;No;;No
 ;;;;if{;;i = i +2;;;};;;;;;Correct ?;;Yes;;No;;No
 if(j<k){;;....;;}else if(k==j){;;....;;}else{;;...;;};;Correct ?;;Yes;;No;;Yes
-switch(intergerVarable){;;case 1: System.out.println("Option 1");;;break;;;case 2: System.out.println("Option 2");;;break;};;;;Correct ?;;Yes;;No;;Yes
+;;switch(intergerVarable){;;case 1: System.out.println("Option 1");;;break;;;case 2: System.out.println("Option 2");;;break;};;;;Correct ?;;Yes;;No;;Yes
 if(i>0){;;......;;}else{;;......;;}else{;;.....;;};;;;Correct ?;;Yes;;No;;No
 ;;;;switch(intergerVarable){;;break;;;};;;;;;Correct ?;;Yes;;No;;No
 ;;;;while(variable = 5);;......;;};;;;;;Correct ?;;Yes;;No;;No;;Missing {
 ;;for(int i =0;i< 6;i++){;; while(i<3){;;  System.out.println("Variable i is below 3");;; };;};;;;Correct ?;;Yes;;No;;Yes
 ;;switch(stringVarable){;;case "one": System.out.println("Option 1");;;break;;;case "two": System.out.println("Option 2");;;break;};;;;Correct ?;;Yes;;No;;Yes
-;;;;do{;;i = i +2;;;}while(i<6);;;;;Correct ?;;Yes;;No;;Yes
+;;;;do{;;i = i +2;;;}while(i<6);;;;;;;Correct ?;;Yes;;No;;Yes
 ;;;;do{;;i = i +2;;;}while;;;;;;;Correct ?;;Yes;;No;;No;;While requires () with expression
 ;;;;if(variableString.equals(inputString)){;;break;;;};;;;;;Correct ?;;Yes;;No;;Yes
 ;;;;for{;;......;;};;;;;;Correct ?;;Yes;;No;;No;;Requires (....) with expression

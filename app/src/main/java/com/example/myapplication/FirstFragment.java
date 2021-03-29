@@ -30,6 +30,8 @@ public class FirstFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+
+        //NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_loginFragment);
         // Get the layout for this FirstFragment
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
@@ -182,6 +184,18 @@ public class FirstFragment extends Fragment {
                 //  MainActivity.readIn2();
                 //Direct to the second fragment
                 NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentThree);
+
+            }
+        });
+
+        view.findViewById(R.id.button_level9).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
+            @Override
+            public void onClick(View view) {
+                level = 9;
+                selectionOfLevel(level);
+                //  MainActivity.readIn2();
+                //Direct to the second fragment
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentFour);
 
             }
         });

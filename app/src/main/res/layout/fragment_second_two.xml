@@ -9,47 +9,44 @@
 
 
     <TextView
-        android:id="@+id/textview_second_1_two"
+        android:id="@+id/textview_second_8_two"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginBottom="12dp"
         android:text="question -Line1"
-        android:textSize="30sp"
+
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/button_one_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <TextView
-        android:id="@+id/textview_second_2_two"
+        android:id="@+id/textview_second_7_two"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginBottom="68dp"
         android:text="question -Line2"
-        android:textSize="30sp"
+
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/button_one_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textview_second_3_two"
+        android:id="@+id/textview_second_6_two"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginBottom="100dp"
         android:text="question -Line3"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_second_4_two"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textview_second_4_two"
-        android:layout_width="301dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="148dp"
-        android:text="question -Line4"
-        android:textSize="30sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/button_one_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,51 +57,81 @@
         android:id="@+id/textview_second_5_two"
         android:layout_width="301dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="204dp"
-        android:text="question -Line5"
-        android:textSize="30sp"
+        android:layout_marginBottom="148dp"
+        android:text="question -Line4"
+
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/button_one_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_second_6_two"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_4_two"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textview_second_8_two"
+        android:id="@+id/textview_second_4_two"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="204dp"
+        android:text="question -Line5"
+
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_3_two"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textview_second_1_two"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginBottom="400dp"
         android:text="question -Line8"
-        android:textSize="30sp"
+
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/button_one_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textview_second_7_two"
+        android:id="@+id/textview_second_2_two"
         android:layout_width="301dp"
         android:layout_height="55dp"
         android:layout_marginBottom="312dp"
         android:text="question -Line7"
-        android:textSize="30sp"
+
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/button_one_two"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_second_8_two"
+        app:layout_constraintTop_toBottomOf="@+id/textview_second_1_two"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textview_second_6_two"
-        android:layout_width="301dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="260dp"
-        android:text="question -Line6"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_one_two"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_second_7_two"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/textview_second_3_two"
+            android:layout_width="301dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="260dp"
+            android:autoSizeMaxTextSize="25sp"
+
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:text="question -Line6"
+            app:layout_constraintBottom_toTopOf="@+id/button_one_two"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_second_2_two"
+            app:layout_constraintVertical_bias="0.0" />
+
+
 
     <Button
         android:id="@+id/button_one_two"

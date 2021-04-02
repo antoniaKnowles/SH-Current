@@ -1,6 +1,10 @@
 package com.example.myapplication.ui.login;
 
 import androidx.annotation.Nullable;
+import androidx.navigation.fragment.NavHostFragment;
+
+import com.example.myapplication.FirstFragment;
+import com.example.myapplication.R;
 
 /**
  * Authentication result : success (user details) or error message.
@@ -17,6 +21,7 @@ class LoginResult {
 
     LoginResult(@Nullable LoggedInUserView success) {
         this.success = success;
+
     }
 
     @Nullable

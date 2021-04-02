@@ -8,6 +8,7 @@ import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.FirstFragment;
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
 public class LoginFragment extends Fragment {
@@ -75,7 +77,10 @@ public class LoginFragment extends Fragment {
                     showLoginFailed(loginResult.getError());
                 }
                 if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
+                    Intent intent = new Intent(getActivity(), MainActivity.class);
+                    startActivity(intent);
+                   // NavHostFragment.findNavController(LoginFragment.this).navigate(R.id.action_loginFragment_to_FirstFragment);
+                  //  updateUiWithUser(loginResult.getSuccess());
                 }
             }
         });

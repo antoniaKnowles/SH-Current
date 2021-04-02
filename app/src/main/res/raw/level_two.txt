@@ -6,7 +6,6 @@ What does &&;; represent?;;Multiplication;;Modulus;;Addition;;And;;And
 What does ;;; represent?;;Multiplication;;Not;;And;;End of line;;End of line
 What does !=;; represent?;;Increment;;Not;;Equal;;Not Equal;;Not Equal
 What does <=;; represent?;;Greater than/Equal too;;Less than/Equal too;;Equal too;;Less than;;Less than/Equal too
-What does %;; represent?;;Modulus;;Multiplication;;Division;;Equal too;;Modulus
 What does /;; represent?;;End of line;;Increment;;Division;;Modulus;;Division
 What does ++;; represent?;;Subtraction;;Decrement;;Multiplication;;Increment;;Increment
 What does --;; represent?;;Addition;;Decrement;;Increment;;Division;;Decrement

@@ -78,10 +78,10 @@
             app:destination="@id/FirstFragment" />
         <action
             android:id="@+id/action_knowledge_to_knowledgeLevel1"
-            app:destination="@id/knowledgeLevel1" />
+            app:destination="@id/KnowledgeLevel1" />
     </fragment>
     <fragment
-        android:id="@+id/knowledgeLevel1"
+        android:id="@+id/KnowledgeLevel1"
         android:name="com.example.myapplication.KnowledgeLevel1"
         android:label="fragment_knowledge_level1"
         tools:layout="@layout/fragment_knowledge_level1" >

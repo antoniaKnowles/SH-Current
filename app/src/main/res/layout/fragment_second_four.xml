@@ -8,55 +8,61 @@
     tools:context=".SecondFragmentFour">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="5dp" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="288dp"
-            android:text="empty"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#A4C639" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:id="@+id/linearLayout2">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView1"
-            android:layout_marginTop="23dp"
-            android:text="input_lable"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="#0099FF" />
+            android:layout_below="@+id/linearLayout2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="Input the following prompts" />
 
         <EditText
-            android:id="@+id/editText1"
-            android:layout_width="wrap_content"
+            android:id="@+id/nameInput"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textView2"
-            android:layout_toRightOf="@+id/textView2"
-            android:background="#CCCCCC"
             android:ems="10"
-            android:inputType="textPersonName" >
+            android:hint="Name (Bob)"
+            android:inputType="textPersonName" />
 
-            <requestFocus />
-        </EditText>
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email (bob@yahoo.com)"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/favoriteNumberInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Favorite Number (15)"
+            android:inputType="number" />
 
         <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView2"
-            android:layout_marginTop="20dp"
-            android:background="#0099FF"
-            android:text="sub"
-            android:textColor="#FFFFFF" />
+            android:text="Submit"
+
+         />
+    </LinearLayout>
+
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton2"
@@ -64,9 +70,10 @@
             android:layout_height="57dp"
             android:clickable="true"
             android:src="@drawable/ic_baseline_home_24"
-            app:backgroundTint="#00FFFFFF" />
+            app:backgroundTint="#00FFFFFF"
+            tools:ignore="MissingConstraints" />
 
-    </RelativeLayout>
+
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

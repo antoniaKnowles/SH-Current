@@ -106,6 +106,334 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
+    <string name="Variable">
+    "Variables\n\n
+
+        "A variable is an object used to store information in java, such as name and level. These variables"
+        "have to be given a type so the program knows how to store the variable and how they should interact.\n"
+        "To use a variable, it must first be declared .All lines of code which do not end with {} must end with ;\n\n"
+
+        "Integer is any whole number, e.g. 7, 97, 3748, 0 \n"
+        "int id = 987;\n\n"
+
+        "Float is any decimal number such as 5.3 or 0.753785\n"
+"float score = 5.6f;\n"
+"All numbers must have a f behind it when first declares\n\n"
+
+"Boolean is a variable that holds only true or false as a value\n "
+"boolean user = true;\n\n"
+
+"Char is a single character such as a,b or c \n"
+"char FirstInitial = 'K';\n"
+"all char values have to be in '…'\n\n"
+
+"A String is a combination of Char's. Strings can also represent numbers; however, no numerical"
+        "operations can be made without its transformation back to type Integer.\n"
+"String name = "bob";\n"
+"all string values have to be in "…"\n\n"
+
+
+
+     </string>
+    <string name="Symbols">
+    "Operators \n\n"
+        "Operators are symbols that can interact with variables.\n"
+        "All these symbols interact with variables of type int or float\n\n"
+        "Basic mathematical symbols\n"
+"+ Addition\n"
+"- Subtraction\n"
+"* Multiplication \n"
+"/ Division \n"
+"> Greater Than \n"
+"	&#60;Less Than \n"
+    "> Greater Than/Equal Too \n"
+"	&#60;Less Than/Equal Too\n\n"
+
+    "Can be used in many data type contex\n"
+   " = equal too for seting on values\n"
+"! not \n"
+"!= not equal too\n"
+".equals() if two stings are equal \n"
+"== equal comparison comparisons \n\n"
+
+"Most commonly used in for loops\n"
+"++ Increment\n"
+"— Decrement\n"
+"Example\n"
+"i++\n"
+"is the equivalent too i = i+1\n\n"
+
+"More commonly used in conditions in loops in next level\n"
+"|| or\n"
+"	&#38;	&#38; and\n"
+"Example\n"
+"( i &#60;4)	&#38;	&#38;!(i=2) \n"
+"So it is only true on the values 0,1 and 3\n\n"
+
+
+    </string>
+
+<string name="Loops"><![CDATA[
+    "Conditional Statements \n\n"
+"Conditions are variables interacting with the operations.Such as x==5 or a>b\n\n"
+
+
+
+"System.out.println(variable); - is the code required to print out a statement to the terminal which can contain\n\n"
+
+
+"While loops are used when there is code needing to run along as the condition is true,"
+" while loops should contain an element that interacts with what is in the condition so that the loop will eventually end\n"
+"while(condition){\n"
+".....\n"
+"}\n\n\n"
+
+"Example\n\n"
+
+"while(i>7){\n"
+"total = total +i;\n"
+"i—;\n"
+"}\n\n\n"
+
+"For loops are repeated for a set number of times, there can be defined in a unique condition"
+" statement of three parts, an example of which is (int i = 0; i]]><<![CDATA[=10;i++) in this"
+ " condition, the variable i is declared and set to zero; then for each time the code is running,"
+ " i is incremented upwards(i=i+1) while i is less than or equal to 10.when it meets this condition the loop will stop.\n\n"
+"Example\n\n"
+
+"for(int i = 10;i>=0;i—){\n"
+"System.out.print("Countdown" + i);\n"
+"}\n"
+
+"In the example, the variable i is declared as an integer of 10, then for each loop while i is still "
+"more significant than or equal to 0, i decrements (i = i-1).\n\n\n"
+
+
+"Break\n\n"
+"switch statement does not contain a condition. Instead, it uses a value such as a variable."
+ "Then it uses cases for the possible value of the variable. This can be used if there is a complex.\n"
+
+"Break is a statement that is required for switch, as demonstrated.\n\n"
+"Example\n\n"
+
+
+"switch (level) {\n"
+"  case 5:\n"
+"    System.out.println("Welcome to level 5");\n"
+"    break;\n"
+"  case 4:\n"
+"    System.out.println("Welcome to level 4");\n"
+"    break;\n"
+"case 3:\n"
+"    System.out.println("Welcome to level 3");\n"
+"    break;\n"
+"  default:\n"
+"    System.out.println("No level selected");\n"
+"}\n\n"
+
+
+"break can also be used in other situations\n"
+
+"Example\n\n"
+"while (i>2){\n"
+"if(i==5){\n"
+"break;\n"
+"}\n"
+"i++;\n"
+"}\n\n\n"
+
+"if-else statement is used in the context of if a condition is true, then do a, and if the condition is false, do b\n\n"
+    "Example\n\n"
+"if (condition){\n"
+"a\n"
+"}else {\n"
+"b\n"
+"}\n"
+
+
+]]></string>
+
+    <string name="Arrays">
+
+       " Arrays hold collections of variables of the same type.\n"
+"They can be declared as \n"
+"String[] names;\n\n"
+"Values can be added to arrays by either;\n"
+"int[] scores = {12, 9, 8, 4};\n"
+"or \n"
+"int[4] scores = 8;\n"
+"This puts the value eight into the array at position 4.\n"
+       " Key information to know about the positions in arrays is that they start at 0."
+        "So if adding or removing from an array, the first value is 0.\n\n"
+
+"To get the size of arrays which is how many values are in the array by;\n"
+".length\n\n\n"
+
+"Example \n"
+"int TotalScores = 0;\n"
+"    for(int j = 0; j&#60;scores.length;j++){\n"
+"         TotalScores = TotalScores + scores[j];\n"
+"}\n"
+"This can also be writen as \n"
+"   int TotalScores = 0;\n"
+"   for(int j: scores){\n"
+"          TotalScores = TotalScores + j;\n"
+"   }\n\n	"
+
+"Arrays can not only contain variables from one type. It can also contain arrays. For example; \n"
+
+"Student 1's grades English A French B History A\n"
+"Student 2's grades English C French C History A\n"
+"Student 3's grades English D French B History C\n\n"
+
+"char[][] classGrades = {{'a','b','a'},{'c','c','a'},{'d','b','c'}};\n\n"
+
+"So to retrieve  Student 3's grade in English \n"
+"char french = grades[2][0];\n"
+"This occurs with the first number representing the student placement and the second representing"
+        " the second array's grade placement. These numbers may seem first incorrect, but it is essential"
+        " to remember that the array begins at 0\n"
+
+
+</string>
+
+    <string name="Structure">
+
+        "Classes are separate pages of the program, which can all be connected to the main class. This is done to improve the code's readability as the variables can be used more efficiently by only being present when required. Each class is made up of smaller parts; these are called Methods.\n"
+
+
+"Methods are created in java as small functions of the program in which everyone does something different. They have the option to return a value or complete an operation.\n\n"
+
+"Example\n"
+"public String exampleName(String firstName, String  lastName) {\n"
+"...................\n"
+"return name;\n"
+"}\n"
+"Where firstName and lastName are parameters, which are variables that are passed into the method from elsewhere when the method is called, there's are not required and can be any type.\n\n"
+
+"The method name can be anything that best describes the method; combining the parameters and the method name makes it unique.\n"
+
+""public" is a type of modifier. Modifiers define access to the method (access modifiers) or other functionality(non-access modifiers).\n\n"
+"Access Modifiers:\n"
+"-Public -accessible for all\n"
+"-Private - accessible for only current class\n\n"
+
+"Non-Access Modifiers:\n"
+"-final-  methods and classes, value can not be changed elsewhere\n"
+"-static - just methods mean that it can be used freely in another class\n"
+"-abstract -discussed in higher level\n\n"
+
+"When the access control is not defined, "void" can be used or in conjunction with other modifiers. It is also used when creating a main method for a class.\n\n"
+
+"The String in this example is the return type; this means that the program expects this method to return a string. This can be replaced with any type. Otherwise, void can be used, representing the method is not expected to return anything.\n"
+
+"Example\n"
+
+"String fullName = exampleName(firstName,lastName);\n"
+"This is a eample of a method being called which returns a string and saves it to fullName.\n\n"
+
+"For methods with no return value can be called with simply;\n"
+"exampleAge();\n\n"
+
+"This can be done elsewhere in the same class or even in the method called itself. This is called Recursion.\n"
+
+"Example\n"
+"This is an example of a program that will count down from 10 to 1\n"
+
+"public class RecursionExample {\n"
+
+"      static int stopCountdown = 1; //stopCountdown is declared and initlised\n"
+"      static int count=10;  //count is declared and initlised\n"
+
+" public static void main(String[] args) {  //main method is created\n"
+"            countdown();  //calls the check method\n"
+"     }
+
+"      public static void countdown(){\n"
+"            System.out.println("In "+count + "!");  //Displays a message "In (count)!"\n"
+"             count--;  //decreases the number in count\n"
+"              if(count>stopCountdown){  // checks that count is still higher than where it has to stop\n"
+"                          countdown();  //recursion occurs by it calling itself\n"
+"               }\n"
+"        }\n"
+"}\n\n"
+
+"One of the essential logical steps above is that the variables are global, meaning that both stopCountdown and count are outwith the methods. Meaning that all methods can use them, and they are not re-set if there is a recursive call by a method that would happen if they were local.\n"
+
+"When discussing variable, there are two scopes in a class, meaning where they can be used. Local variables are those declared within a method-so can only be used within that letter. Global variables are that can be accessed by all methods.\n"
+
+"Above, we can see an example of the main method; this is required in the classes, so the program knows where to begin. It is public, so it can be accessed everywhere and is always called main. The parameter, in this case, is different as it is taking in the args value from the command line, which is the line used to run in the terminal.\n"
+
+
+"How can you join the classes to use a  method or a variable from class A in class B?\n"
+"The way to approach this by creating an object. This creates an instance of the class(A) in a new class(B)  or the same class(A). For the new class(B), you can access methods in the original classes(A). If it is in the same class(A), you can access attributes of variables.\n"
+
+"Example Objects - Attributes\n"
+
+"In Class A\n"
+"    ClassAname objectA = new ClassAname();\n"
+
+"This can then be used;\n"
+"-To get a variable from object A\n"
+
+"String newString = objectA.stringA;\n"
+
+"-To change the variable in object A\n"
+
+"objectA.stringA =253;\n"
+"To avoid this from happening final can be used\n"
+"final String  stringA = 100;\n"
+
+"The reason we have objects that are useful is that you can have more than one object, so you can change one without affecting the other.\n"
+
+"Example Objects - Methods\n"
+
+"The other way to use objects is by creating an instance of another class in that class to use the methods in that class.\n"
+
+"In Class A\n"
+"    ClassBname objectB = new ClassBname();\n"
+
+"-To call a method from object B\n"
+"objectB.methodName();\n"
+"or\n"
+"objectB.methodName(String name);//if require parameter\n"
+
+"-If method in B returns value\n"
+"String varableReturned = objectB.methodName();\n"
+
+"To interact with a variable of class B\n"
+
+"Wanting to move variable from class B to A,\n"
+"Firstly create in class B\n"
+
+"public String getName(){\n"
+"        return varableName;\n"
+"}\n\n"
+
+
+"Secondly, in class A\n"
+
+"String nameB = objectB.getName();\n\n\n"
+
+"Wanting to change a variable in class B from A\n\n"
+"Firstly create in class B\n"
+
+"public void setAge(int ageA){\n"
+"   ageB = ageA;\n"
+"}\n\n"
+
+
+"Secondly, in class A\n"
+
+"int age = 5;\n"
+"objectB.setAge(age);\n\n"
+
+"The first parts in both these steps can only be done if it is public or static. \n"
+
+</string>
+
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -115,6 +443,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="level_1">Level 1</string>
 
 
 </resources>

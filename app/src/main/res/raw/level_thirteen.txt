@@ -1,6 +1,6 @@
 What other concept of Object Oriented Programming;; allows for Polymorphism?;;Inheritance;;Abstraction;;Inheritance
-What type of Polymorphism allows to methods to be;; called the same name with different parameters?;;Compile Time;;Runtime;;Compile Time
+What type of Polymorphism allows to methods a be;; called the same name with different parameters?;;Compile Time;;Runtime;;Compile Time
 With Compile Time Polymorphism;; what is determined at compile time?;;name of object;;type of the object;;type of the object
-What is a benefit of;; Polymorphism for code?;;Re-usability;;Readibility;;Re-usability
+What is a benefit of;; Polymorphism for code?;;Re-usability;;Security;;Re-usability
 What concept of oop uses Inheritance;; methods to perform other tasks?;;Polymorphism;;Encapsulation;;Polymorphism
 What type of Polymorphism;; overrides methods?;;Runtime;;CompileTime;;Runtime

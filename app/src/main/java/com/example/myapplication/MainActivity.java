@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.provider.Settings;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     public static int[] LevelQuestion = new int[15];
     public static ArrayList<Integer> LevelsPass = new ArrayList<Integer>();
     public static int questionsaskedCount = 0;
+
+   // SecondFragmentFour fragmentFour_obj;
 
     public static ArrayList<String> getInput() {//needs to return diffrent array for every level
 
@@ -151,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -217,8 +220,22 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
+           // fragmentFour_obj = (SecondFragmentFour)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+
 
         }
+        public void test(View v){
+            //fragmentFour_obj = (SecondFragmentFour)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+         //  String input = fragmentFour_obj.e1.getText().toString();
+          //  System.out.println(input);
+        }
+
+    private String mStringFromFragment;
+
+
+   // public String getData() {
+     //   return editText.getText().toString();
+   // }
 
 
 

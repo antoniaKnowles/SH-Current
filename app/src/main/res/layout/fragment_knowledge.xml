@@ -13,7 +13,7 @@ tools:context=".Knowledge">
     android:layout_height="wrap_content">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/floatingActionButtonhome"
         android:layout_width="59dp"
         android:layout_height="57dp"
         android:clickable="true"
@@ -38,7 +38,7 @@ tools:context=".Knowledge">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge" />
+        app:layout_constraintTop_toBottomOf="@+id/button_Knowledge1" />
 
     <Button
         android:id="@+id/button_Knowledge3"
@@ -210,12 +210,12 @@ tools:context=".Knowledge">
 
 
     <Button
-        android:id="@+id/button_Knowledge"
+        android:id="@+id/button_Knowledge1"
         android:layout_width="212dp"
         android:layout_height="48dp"
         android:layout_marginTop="84dp"
 
-        android:text="Level 1"
+        android:text="@string/level_1"
 
         app:backgroundTint="@color/Dark"
         app:layout_constraintEnd_toEndOf="parent"

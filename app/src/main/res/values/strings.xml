@@ -174,7 +174,7 @@
 
     </string>
 
-<string name="Loops"><![CDATA[
+    <string name="Loops"><![CDATA[
     "Conditional Statements \n\n"
 "Conditions are variables interacting with the operations.Such as x==5 or a>b\n\n"
 

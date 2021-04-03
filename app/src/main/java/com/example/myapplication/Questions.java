@@ -30,12 +30,14 @@ public class Questions extends Fragment {
 
             String[] linePart = line.split(";;");//split the line up
              int count = 0;//counts the parts in the line
+            if(!((level==14)||(level==9) )) {
+                QuestionPt1.add(linePart[count]);//Context of Question
+                count++;
+                QuestionPt2.add(linePart[count]);//Item of Question
+                count++;
+            }
 
-            QuestionPt1.add(linePart[count]);//Context of Question
-            count++;
-            QuestionPt2.add(linePart[count]);//Item of Question
-            count++;
-             if((level ==5)||(level ==14)||(level ==6)||(level ==9)) {
+             if((level ==5)|(level ==6)) {
                  QuestionPt3.add(linePart[count]);//Item of Question
                  count++;
                  QuestionPt4.add(linePart[count]);//Item of Question
@@ -53,9 +55,13 @@ public class Questions extends Fragment {
 
 
             //change what is in line part to i and ++
-            if((level!=14)||(level!=9) ){
+          //  if((level!=14)||(level!=9) ){
                 options.add(linePart[count]);
                 count++;
+                options.add(linePart[count]);
+                count++;
+          //  }
+            if((level==14)||(level==9) ) {
                 options.add(linePart[count]);
                 count++;
             }

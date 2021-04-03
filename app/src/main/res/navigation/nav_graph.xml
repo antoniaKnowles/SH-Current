@@ -223,5 +223,23 @@
         <action
             android:id="@+id/action_secondFragmentFour_to_levelCompleted"
             app:destination="@id/levelCompleted" />
+        <action
+            android:id="@+id/action_secondFragmentFour_self"
+            app:destination="@id/secondFragmentFour" />
+        <action
+            android:id="@+id/action_secondFragmentFour_to_thirdFragmentFour"
+            app:destination="@id/thirdFragmentFour" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragmentFour"
+        android:name="com.example.myapplication.ThirdFragmentFour"
+        android:label="fragment_third_four"
+        tools:layout="@layout/fragment_third_four" >
+        <action
+            android:id="@+id/action_thirdFragmentFour_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_thirdFragmentFour_to_secondFragmentFour"
+            app:destination="@id/secondFragmentFour" />
     </fragment>
 </navigation>

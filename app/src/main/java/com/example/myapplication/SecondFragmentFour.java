@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Bundle;
 import android.app.Activity;
 import android.text.Editable;
@@ -13,6 +14,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,20 +23,129 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Lifecycle;
+import androidx.navigation.fragment.NavHostFragment;
 
 public class SecondFragmentFour extends Fragment {//https://javapapers.com/android/get-user-input-in-android/
+
+
+
+    public Questions qLib = new Questions();
+
+    public Button mButtonChoice1;
+    public Button mButtonChoice2;
+    public Button mButtonChoice3;
+    public ImageView image;
+    private String mAnswer;
+    private int mQuestionNumber = MainActivity.getQuestionNumber();
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
-        View view = inflater.inflate(R.layout.fragment_second_four, container, false);
 
-           return view;
+
+           return inflater.inflate(R.layout.fragment_second_four, container, false);
 }
 
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mButtonChoice1 = (Button) view.findViewById(R.id.button_four_1);
+        mButtonChoice2 = (Button) view.findViewById(R.id.button_four_2);
+        mButtonChoice3 = (Button) view.findViewById(R.id.button_four_3);
+        image = (ImageView) view.findViewById(R.id.imageViewCode) ;
+
+        qLib.ReadFilesOne();
+        updateQuestion();
+
+        view.findViewById(R.id.button_four_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (mButtonChoice1.getText().equals(mAnswer)) {
+
+                    correct();
+
+                } else {
+
+                    Incorrect();
+                }
+
+            }
+        });
+        view.findViewById(R.id.button_four_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (mButtonChoice2.getText().equals(mAnswer)) {
+
+                    correct();
+
+                } else {
+
+                    Incorrect();
+                }
+
+            }
+        });
+
+        view.findViewById(R.id.button_four_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (mButtonChoice3.getText().equals(mAnswer)) {
+
+                    correct();
+
+                } else {
+
+                    Incorrect();
+                }
+
+            }
+        });
+
+
+
+
+    }
+
+
+    private void updateQuestion() {
+        switch(mQuestionNumber) {
+
+            case 1 : image.setImageResource(R.drawable.one_code);break;
+
+        }
+
+        mButtonChoice1.setText(qLib.getchoice1(mQuestionNumber));
+        mButtonChoice2.setText(qLib.getchoice2(mQuestionNumber));
+        mButtonChoice3.setText(qLib.getchoice3(mQuestionNumber));
+        mAnswer = qLib.getAns(mQuestionNumber);
+        MainActivity.currentAns(mAnswer);
+
+    }
+
+    private void correct(){
+        if( MainActivity.checkCompleted() == "Pass"){
+            NavHostFragment.findNavController(SecondFragmentFour.this).navigate(R.id.action_secondFragmentFour_to_levelPassed);
+
+        }else if( MainActivity.checkCompleted() == "Complete"){
+            NavHostFragment.findNavController(SecondFragmentFour.this).navigate(R.id.action_secondFragmentFour_to_levelCompleted);
+
+        }else{
+            MainActivity.addQuestionNumber();
+            NavHostFragment.findNavController(SecondFragmentFour.this).navigate(R.id.action_secondFragmentFour_self);
+        }
+    }
+
+    private void Incorrect(){
+
+        MainActivity.addIncorrect();
+
+        NavHostFragment.findNavController(SecondFragmentFour.this)
+                .navigate(R.id.action_secondFragmentFour_to_thirdFragmentFour);
     }
 
 }

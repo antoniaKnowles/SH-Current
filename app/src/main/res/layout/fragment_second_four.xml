@@ -8,23 +8,16 @@
     tools:context=".SecondFragmentFour">
 
 
-
-
-
-
-
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton2"
-            android:layout_width="59dp"
-            android:layout_height="57dp"
-            android:clickable="true"
-            android:src="@drawable/ic_baseline_home_24"
-            app:backgroundTint="#00FFFFFF"
-            tools:ignore="MissingConstraints" />
-
-
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="59dp"
+        android:layout_height="57dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_home_24"
+        app:backgroundTint="#00FFFFFF"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton_help"
@@ -42,8 +35,8 @@
 
     <ImageView
         android:id="@+id/imageViewCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="417dp"
+        android:layout_height="375dp"
         android:src="@drawable/one_code"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,6 +44,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.231" />
+
+
+    <Button
+        android:id="@+id/button_four_1"
+        android:layout_width="252dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="164dp"
+        android:text="1"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCode"
+        app:layout_constraintVertical_bias="0.621" />
+
+    <Button
+        android:id="@+id/button_four_2"
+        android:layout_width="252dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="120dp"
+        android:text="2"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_one_three"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_four_3"
+        android:layout_width="252dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="52dp"
+        android:text="3"
+        app:backgroundTint="@color/Dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_four_2"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

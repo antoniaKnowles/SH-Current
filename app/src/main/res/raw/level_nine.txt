@@ -1,1 +1,8 @@
-Line 1;;Line 2;;Line 3;;Line 2
+ab;;a * b;;( a * b );;( a * b )
+/;;%;;>;;%
+Line 8;;Line 10;;Line 4;;Line 4
+third.equals(second);;first.equals(second);;third.(equalsSecond);;third.equals(second)
+Line 6;;Line 4;;Line 2;;Line 4
+Line 6;;Line 4;;None;;None
+sum all numbers too 100;; sum all numbers too 101;;The value of i;;sum all numbers too 100
+case 44:;;case 44;;default:;;default:

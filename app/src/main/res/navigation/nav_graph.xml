@@ -190,6 +190,9 @@
         <action
             android:id="@+id/action_levelPassed_to_secondFragmentTwo"
             app:destination="@id/secondFragmentTwo" />
+        <action
+            android:id="@+id/action_levelPassed_to_secondFragmentFour"
+            app:destination="@id/secondFragmentFour" />
     </fragment>
     <fragment
         android:id="@+id/levelCompleted"

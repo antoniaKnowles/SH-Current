@@ -106,6 +106,31 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
             }
         });
 
+        view.findViewById(R.id.floatingActionButton_help ).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.addQuestionNumber();
+                MainActivity.newLevel(MainActivity.getlevel());
+
+                NavHostFragment.findNavController(SecondFragmentFour.this)
+                        .navigate(R.id.action_secondFragmentFour_to_knowledge);
+
+
+            }
+        });
+
+        view.findViewById(R.id.floatingActionButtonhome).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainActivity.addQuestionNumber();
+                MainActivity.newLevel(MainActivity.getlevel());
+
+                NavHostFragment.findNavController(SecondFragmentFour.this)
+                        .navigate(R.id.action_secondFragmentFour_to_FirstFragment);
+
+
+            }
+        });
 
 
 
@@ -115,7 +140,15 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
     private void updateQuestion() {
         switch(mQuestionNumber) {
 
-            case 1 : image.setImageResource(R.drawable.one_code);break;
+            case 0: image.setImageResource(R.drawable.nine_one);break;
+            case 1:image.setImageResource(R.drawable.nine_two);break;
+            case 2: image.setImageResource(R.drawable.nine_three);break;
+            case 3: image.setImageResource(R.drawable.nine_four);break;
+            case 4: image.setImageResource(R.drawable.nine_five);break;
+            case 5: image.setImageResource(R.drawable.nine_six);break;
+            case 6: image.setImageResource(R.drawable.nine_seven);break;
+            case 7: image.setImageResource(R.drawable.nine_eight);break;
+            default:break;
 
         }
 

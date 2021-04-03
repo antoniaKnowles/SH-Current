@@ -71,6 +71,11 @@ public class LevelPassed extends Fragment {
                     MainActivity.addQuestionNumber();
                     NavHostFragment.findNavController(LevelPassed.this)
                             .navigate(R.id.action_levelPassed_to_secondFragmentTwo);
+                }else if((MainActivity.getlevel() == 9)||(MainActivity.getlevel() == 14)){
+                    MainActivity.addQuestionNumber();
+                    NavHostFragment.findNavController(LevelPassed.this)
+                            .navigate(R.id.action_levelPassed_to_secondFragmentFour);
+
                 }
                 //else{pass to 9/14
             }

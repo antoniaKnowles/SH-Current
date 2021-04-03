@@ -130,8 +130,8 @@
 
 "A String is a combination of Char's. Strings can also represent numbers; however, no numerical"
         "operations can be made without its transformation back to type Integer.\n"
-"String name = "bob";\n"
-"all string values have to be in "…"\n\n"
+"String name = &quot;bob&quot;;\n"
+"all string values have to be in &quot;…&quot; \n\n"
 
 
 
@@ -203,7 +203,7 @@
 "Example\n\n"
 
 "for(int i = 10;i>=0;i—){\n"
-"System.out.print("Countdown" + i);\n"
+"System.out.print(&quot;Countdown&quot; + i);\n"
 "}\n"
 
 "In the example, the variable i is declared as an integer of 10, then for each loop while i is still "
@@ -220,16 +220,16 @@
 
 "switch (level) {\n"
 "  case 5:\n"
-"    System.out.println("Welcome to level 5");\n"
+"    System.out.println(&quot;Welcome to level 5&quot;);\n"
 "    break;\n"
 "  case 4:\n"
-"    System.out.println("Welcome to level 4");\n"
+"    System.out.println(&quot;Welcome to level 4&quot;);\n"
 "    break;\n"
 "case 3:\n"
-"    System.out.println("Welcome to level 3");\n"
+"    System.out.println(&quot;Welcome to level 3&quot;);\n"
 "    break;\n"
 "  default:\n"
-"    System.out.println("No level selected");\n"
+"    System.out.println(&quot;No level selected&quot;);\n"
 "}\n\n"
 
 
@@ -331,7 +331,7 @@
 "Example\n"
 
 "String fullName = exampleName(firstName,lastName);\n"
-"This is a eample of a method being called which returns a string and saves it to fullName.\n\n"
+"This is a example of a method being called which returns a string and saves it to fullName.\n\n"
 
 "For methods with no return value can be called with simply;\n"
 "exampleAge();\n\n"
@@ -351,7 +351,7 @@
 "     }
 
 "      public static void countdown(){\n"
-"            System.out.println("In "+count + "!");  //Displays a message "In (count)!"\n"
+"            System.out.println(&quot;In &quot;+count );  //Displays a message &quot;In (count)&quot;\n"
 "             count—;  //decreases the number in count\n"
 "              if(count>stopCountdown){  // checks that count is still higher than where it has to stop\n"
 "                          countdown();  //recursion occurs by it calling itself\n"
@@ -381,9 +381,9 @@
 
 "-To change the variable in object A\n"
 
-"objectA.stringA =253;\n"
+"objectA.stringA =&quot;bob&quot;;\n"
 "To avoid this from happening final can be used\n"
-"final String  stringA = 100;\n"
+"final String  stringA = &quot;bob&quot;;\n"
 
 "The reason we have objects that are useful is that you can have more than one object, so you can change one without affecting the other.\n\n\n"
 

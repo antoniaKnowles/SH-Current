@@ -27,7 +27,7 @@ public class Knowledge extends Fragment {
     private Button button12;
     private Button button13;
     private Button button14;
-    public int selected;
+    public int selected = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -84,12 +84,14 @@ public class Knowledge extends Fragment {
             @Override
             public void onClick(View view) {
 
-                selected = 1;
-                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledgeLevel1);//Take back to home fragment
+                MainActivity.setSelectedHelp(1);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
 
 
             }
         });
+
+
 
         view.findViewById(R.id.floatingActionButtonhome).setOnClickListener(new View.OnClickListener() {//On click of home button
             @Override
@@ -102,5 +104,9 @@ public class Knowledge extends Fragment {
         });
 
 
+    }
+
+    public int getSelected(){
+        return selected;
     }
 }

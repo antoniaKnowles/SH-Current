@@ -79,6 +79,9 @@
         <action
             android:id="@+id/action_knowledge_to_knowledgeLevel1"
             app:destination="@id/KnowledgeLevel1" />
+        <action
+            android:id="@+id/action_knowledge_to_knowledge_Information"
+            app:destination="@id/knowledge_Information" />
     </fragment>
     <fragment
         android:id="@+id/KnowledgeLevel1"
@@ -241,5 +244,17 @@
         <action
             android:id="@+id/action_thirdFragmentFour_to_secondFragmentFour"
             app:destination="@id/secondFragmentFour" />
+    </fragment>
+    <fragment
+        android:id="@+id/knowledge_Information"
+        android:name="com.example.myapplication.Knowledge_Information"
+        android:label="fragment_knowledge__information"
+        tools:layout="@layout/fragment_knowledge__information" >
+        <action
+            android:id="@+id/action_knowledge_Information_to_knowledge"
+            app:destination="@id/knowledge" />
+        <action
+            android:id="@+id/action_knowledge_Information_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

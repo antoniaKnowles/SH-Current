@@ -13,6 +13,8 @@ import androidx.navigation.fragment.NavHostFragment;
 
 class KnowledgeLevel1 extends Fragment {
     public TextView mQuestion1View;
+    Knowledge k = new Knowledge();
+
 
     @Nullable
     @Override
@@ -23,8 +25,9 @@ class KnowledgeLevel1 extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         mQuestion1View = (TextView) view.findViewById(R.id.textview_second);
-        mQuestion1View.setText(R.string.Variable);
-
+        switch( k.getSelected()) {
+            case 1: mQuestion1View.setText(R.string.Variable); break;
+        }
         super.onViewCreated(view, savedInstanceState);
 
         view.findViewById(R.id.floatingActionButton2).setOnClickListener(new View.OnClickListener() {//On click of home button

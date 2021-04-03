@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public static int[] LevelQuestion = new int[15];
     public static ArrayList<Integer> LevelsPass = new ArrayList<Integer>();
     public static int questionsaskedCount = 0;
+    public static int selectedLevelHelp = 0;
 
    // SecondFragmentFour fragmentFour_obj;
 
@@ -153,6 +154,13 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
+
+    public static void setSelectedHelp(int i){
+        selectedLevelHelp = i;
+    }
+    public static int getSelectedHelp(){
+       return selectedLevelHelp;
+    }
 
 
     @Override

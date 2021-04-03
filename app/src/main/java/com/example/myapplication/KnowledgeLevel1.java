@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.navigation.fragment.NavHostFragment;
 
 class KnowledgeLevel1 extends Fragment {
+    public TextView mQuestion1View;
 
     @Nullable
     @Override
@@ -20,6 +22,8 @@ class KnowledgeLevel1 extends Fragment {
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        mQuestion1View = (TextView) view.findViewById(R.id.textview_second);
+        mQuestion1View.setText(R.string.Variable);
 
         super.onViewCreated(view, savedInstanceState);
 

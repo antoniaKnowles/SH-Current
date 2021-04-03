@@ -24,6 +24,21 @@ import androidx.lifecycle.Lifecycle;
 
 public class SecondFragmentFour extends Fragment {//https://javapapers.com/android/get-user-input-in-android/
 
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
+        View view = inflater.inflate(R.layout.fragment_second_four, container, false);
+
+           return view;
+}
+
+
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+}
+/*
     String name, email;
     int favoriteNumber;
     public EditText e1;
@@ -51,7 +66,7 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
         notatki.setText(settings.getString("value", ""));
 
          */
-
+/*
         return view;
     }
 
@@ -78,7 +93,7 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
       //  loginButton = view.findViewById(R.id.submitButton);
 
     }
-}
+}/*
 /*
     private void setupTextFieldsByContact() {
         // call this method anytime the contact changes without having to find views again

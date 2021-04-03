@@ -108,7 +108,7 @@
     </string>
 
     <string name="Variable">
-    "Variables\n\n
+    "Variables\n\n"
 
         "A variable is an object used to store information in java, such as name and level. These variables"
         "have to be given a type so the program knows how to store the variable and how they should interact.\n"
@@ -197,7 +197,7 @@
 "}\n\n\n"
 
 "For loops are repeated for a set number of times, there can be defined in a unique condition"
-" statement of three parts, an example of which is (int i = 0; i]]><<![CDATA[=10;i++) in this"
+" statement of three parts, an example of which is (int i = 0; i&#60;=10;i++) in this"
  " condition, the variable i is declared and set to zero; then for each time the code is running,"
  " i is incremented upwards(i=i+1) while i is less than or equal to 10.when it meets this condition the loop will stop.\n\n"
 "Example\n\n"
@@ -255,7 +255,7 @@
 ]]></string>
 
     <string name="Arrays">
-
+"Arrays\n\n"
        " Arrays hold collections of variables of the same type.\n"
 "They can be declared as \n"
 "String[] names;\n\n"
@@ -275,7 +275,7 @@
 "    for(int j = 0; j&#60;scores.length;j++){\n"
 "         TotalScores = TotalScores + scores[j];\n"
 "}\n"
-"This can also be writen as \n"
+"This can also be written as \n"
 "   int TotalScores = 0;\n"
 "   for(int j: scores){\n"
 "          TotalScores = TotalScores + j;\n"
@@ -298,8 +298,8 @@
 
 </string>
 
-    <string name="Structure">
-
+    <string name="Structure"><![CDATA[
+"Structure\n\n"
         "Classes are separate pages of the program, which can all be connected to the main class. This is done to improve the code's readability as the variables can be used more efficiently by only being present when required. Each class is made up of smaller parts; these are called Methods.\n"
 
 
@@ -352,24 +352,24 @@
 
 "      public static void countdown(){\n"
 "            System.out.println("In "+count + "!");  //Displays a message "In (count)!"\n"
-"             count--;  //decreases the number in count\n"
+"             count—;  //decreases the number in count\n"
 "              if(count>stopCountdown){  // checks that count is still higher than where it has to stop\n"
 "                          countdown();  //recursion occurs by it calling itself\n"
 "               }\n"
 "        }\n"
 "}\n\n"
 
-"One of the essential logical steps above is that the variables are global, meaning that both stopCountdown and count are outwith the methods. Meaning that all methods can use them, and they are not re-set if there is a recursive call by a method that would happen if they were local.\n"
+"One of the essential logical steps above is that the variables are global, meaning that both stopCountdown and count are outwith the methods. Meaning that all methods can use them, and they are not re-set if there is a recursive call by a method that would happen if they were local.\n\n"
 
-"When discussing variable, there are two scopes in a class, meaning where they can be used. Local variables are those declared within a method-so can only be used within that letter. Global variables are that can be accessed by all methods.\n"
+"When discussing variable, there are two scopes in a class, meaning where they can be used. Local variables are those declared within a method-so can only be used within that letter. Global variables are that can be accessed by all methods.\n\n"
 
-"Above, we can see an example of the main method; this is required in the classes, so the program knows where to begin. It is public, so it can be accessed everywhere and is always called main. The parameter, in this case, is different as it is taking in the args value from the command line, which is the line used to run in the terminal.\n"
+"Above, we can see an example of the main method; this is required in the classes, so the program knows where to begin. It is public, so it can be accessed everywhere and is always called main. The parameter, in this case, is different as it is taking in the args value from the command line, which is the line used to run in the terminal.\n\n\n"
 
 
-"How can you join the classes to use a  method or a variable from class A in class B?\n"
-"The way to approach this by creating an object. This creates an instance of the class(A) in a new class(B)  or the same class(A). For the new class(B), you can access methods in the original classes(A). If it is in the same class(A), you can access attributes of variables.\n"
+"How can you join the classes to use a  method or a variable from class A in class B?\n\n"
+"The way to approach this by creating an object. This creates an instance of the class(A) in a new class(B)  or the same class(A). For the new class(B), you can access methods in the original classes(A). If it is in the same class(A), you can access attributes of variables.\n\n"
 
-"Example Objects - Attributes\n"
+"Example Objects - Attributes\n\n"
 
 "In Class A\n"
 "    ClassAname objectA = new ClassAname();\n"
@@ -385,53 +385,165 @@
 "To avoid this from happening final can be used\n"
 "final String  stringA = 100;\n"
 
-"The reason we have objects that are useful is that you can have more than one object, so you can change one without affecting the other.\n"
+"The reason we have objects that are useful is that you can have more than one object, so you can change one without affecting the other.\n\n\n"
 
 "Example Objects - Methods\n"
 
-"The other way to use objects is by creating an instance of another class in that class to use the methods in that class.\n"
+"The other way to use objects is by creating an instance of another class in that class to use the methods in that class.\n\n"
 
 "In Class A\n"
-"    ClassBname objectB = new ClassBname();\n"
+"    ClassBname objectB = new ClassBname();\n\n"
 
-"-To call a method from object B\n"
-"objectB.methodName();\n"
-"or\n"
-"objectB.methodName(String name);//if require parameter\n"
+"To call a method from object B\n"
+"      objectB.methodName();\n"
+"                  or\n"
+"      objectB.methodName(String name);//if require parameter\n\n"
 
-"-If method in B returns value\n"
-"String varableReturned = objectB.methodName();\n"
+"If method in B returns value\n"
+"       String varableReturned = objectB.methodName();\n\n\n"
 
-"To interact with a variable of class B\n"
+"To interact with a variable of class B\n\n"
 
 "Wanting to move variable from class B to A,\n"
-"Firstly create in class B\n"
+"Firstly create in class B\n\n"
 
 "public String getName(){\n"
 "        return varableName;\n"
 "}\n\n"
 
 
-"Secondly, in class A\n"
+"Secondly, in class A\n\n"
 
 "String nameB = objectB.getName();\n\n\n"
 
-"Wanting to change a variable in class B from A\n\n"
-"Firstly create in class B\n"
+"Wanting to change a variable in class B from A\n"
+"Firstly create in class B\n\n"
 
 "public void setAge(int ageA){\n"
 "   ageB = ageA;\n"
 "}\n\n"
 
-
-"Secondly, in class A\n"
+"Secondly, in class A\n\n"
 
 "int age = 5;\n"
 "objectB.setAge(age);\n\n"
 
 "The first parts in both these steps can only be done if it is public or static. \n"
 
-</string>
+]]></string>
+    <string name="Inheritance">
+        "Inheritance\n\n"
+        "Inheritance is when one class gains some properties from another class.\n"
+"The one inheriting the properties is called the subclass is otherwise known as the child. While the one giving the properties is called the superclass is otherwise known as the parent.\n\n"
+
+"This is a valuable part of a set of 4 properties of object-oriented programming. Inheritance helps the program structure by promoting code re-usability, which saves time for the programmer and saves space and time by reducing the code's size.\n"
+"The code can be written as the sub(child) class includes while creating the class after its name the word "extends" and then the name of the parent class.\n\n"
+
+"Example\n"
+"This adds the number of students in the school already to the number in room A, then saving it in the number of students in schools and displays it\n\n"
+
+"class RoomA{\n"
+"      int noStudentsRoom=32;\n"
+"}\n\n"
+
+"class School extends RoomA{\n"
+
+ "   int noStudentsSchool=200;\n"
+
+  "     public static void main(String args[]){\n"
+  "      School  sch =new School ();\n"
+
+        "       sch.noStudentsSchool = sch.noStudentsSchool +sch.noStudentsRoom;\n"
+   "      System.out.println("Total number of Students:"+sch.noStudentsSchool);\n"
+
+    "  }\n"
+"}\n\n\n"
+
+"Within Inheritance in Java, there are three types;\n\n"
+
+"Single Inheritance: as described above, where a subclass inherits properties from the superclass(parent)\n"
+"Hierarchical Inheritance: where two subclasses(children) inherit from the same superclass(parent)\n"
+"Muli Level Inheritance: There are more steps in the inheritance process, such as a subclass(child) inherits from a superclass(parent). Then another subclass(grandchild) inherits the original subclass(child), making it a parent.\n\n"
+
+
+
+
+        </string>
+    <string name="Encapsulation">
+         "Encapsulation\n\n"
+        "Encapsulation is when the variables are set to private, so they cannot be seen by the user or during debugging. This increase the security of the values stored in the variables. To access the variables, we once again look at getting and set methods in the class that contains the private variables.\n\n"
+"Example\n"
+"public String getName(){\n"
+"        return varableName;\n"
+"}\n\n"
+
+"This return the varable varableName to who called it\n"
+"public void setAge(int ageA){\n"
+"   ageB = ageA;\n"
+"}\n\n"
+"This adjusts the variable ageB with a variable from another class.\n"
+        </string>
+    <string name="Abstraction">
+          "Abstraction\n\n"
+        "Abstraction is when only the essential information can be seen, which means that the user can only see the code's functionality, which improves the security of the data stored in the program.\n"
+"This is done by using abstract classes or interfaces.\n"
+"Abstract is a non -access modifier meaning its use add other functionality to the class or method it's used with.\n\n"
+
+"Example\n"
+"abstract class Shop {//Abstract Class creation\n"
+"  public abstract void Bakery(); //Abstract methods like this have no content\n"
+
+"  public void pastry() {//Normal method\n"
+"    String type = " Cinnimon Roll";\n"
+"  }\n"
+"}\n"
+
+"Abstract classes cannot be used to make objects so, to use Inheritance must be used. Classes with abstract methods must themself become abstract. However, if a class is abstract, all the methods within it do not need to be.\n"
+
+"Interfaces are another way to create abstraction within the code. However, they act the opposite to abstract classes as they can only contain abstract methods.\n\n"
+
+"Example\n\n"
+
+"interface One{\n"
+"    String varableName = "Bob";\n"
+"}\n\n"
+"interface Two{\n"
+"    String varableName = "Sue";\n"
+"}\n\n"
+"class Main implements One, Two{\n"
+
+"    public static void Main(String args[]){\n"
+
+"           System.out.println(One.variableName);\n"
+
+"       System.out.println(Two.varableName);\n"
+"    }\n"
+"}\n"
+        "This way, we can access both separate saved values even though they have the same variable name.\n"
+        </string>
+    <string name="Polymorphism">
+      "Polymorphism\n\n"
+        "Polymorphism is when Inheritance is used to achieve different outcomes from the same inherited class. This helps to reduce the amount of code needed.\n\n"
+
+"Example\n\n"
+"class Shop {\n"
+"  public void Items() {\n"
+"    System.out.println("The shop has in stock");\n"
+"  }\n"
+"}\n\n"
+
+"class Butter extends Shop {\n"
+"  public void animalSound() {\n"
+"    System.out.println("Butter");\n"
+"  }\n"
+"}\n\n"
+
+"class Bread extends Shop {\n"
+"  public void animalSound() {\n"
+"    System.out.println("Bread");\n"
+ " }\n"
+"}\n"
+        </string>
 
 
     <!-- Strings related to login -->

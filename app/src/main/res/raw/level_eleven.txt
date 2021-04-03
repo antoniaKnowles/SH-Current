@@ -1,9 +1,9 @@
 What is not a step to establish;; Encapsulation?;;public variables;;getters;;setters;;private variables;;public variables
-Benefits of Encapsulation?;; ;;Re-usability;;Readability;;Easier debugging;;Simplicity;;Easier debugging
+Benefits of Encapsulation?;; ;;Re-usability;;Readability;;Security;;Simplicity;;Security
 public String getName(){ return name;};;Is this code part of Encapsulation?;;Yes;;No-requiresParameter;;No-requiresReturn;;No-RequiresPrivate;;Yes
 public String getName(){  name = "Bob";};;Is this code part of Encapsulation?;;Yes;;No-requiresParameter;;No-requiresReturn;;No-RequiresPrivate;;No-requiresReturn
 public void setAge(int newAge){age = newAge;};;Is this code part of Encapsulation?;;Yes;;No-requiresParameter;;No-requiresReturn;;No-RequiresPrivate;;Yes
-public void setAge(){age = "Bob";};;Is this code part of Encapsulation?;;Yes;;No-requiresParameter;;No-requiresReturn;;No-RequiresPrivate;;No-requiresParameter
+public void setAge(int){age = ageB;};;Is this code part of Encapsulation?;;Yes;;No-requiresParameter;;No-requiresReturn;;No-RequiresPrivate;;No-requiresParameter
 private String name = "Bob";;;Is this code part of Encapsulation?;;Yes;;No-requiresArray;;No-requiresReturn;;No-RequiresPublic;;Yes
 public String name = "Bob";;;Is this code part of Encapsulation?;;Yes;;No-requiresArray;;No-requiresReturn;;No-RequiresPublic;;No-RequiresPrivate
 What method of Object Oriented Programming reduces;; the amount of variables seen during debugging?;;Encapsulation;;Inheritance;;Abstraction;;Polymorphism;;Encapsulation

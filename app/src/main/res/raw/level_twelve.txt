@@ -8,4 +8,4 @@ public abstract double computePay();;;Is this code part of Abstraction method?;;
 public abstract double computePay(int a);;;Is this code part of Abstraction method?;;Yes;;No;;No
 public abstract double computePay(){ int a = b+c;};;Is this code part of Abstraction method?;;Yes;;No;;No
 How do you call a interface;; from another class in code?;;Implements;;Introduce;;Implements
-What is a benefit to the use;; of a interface?;;Re-usability;;Security;;Security
+What is not a benefit to the use;; of a interface?;;Re-usability;;Security;;Re-usability

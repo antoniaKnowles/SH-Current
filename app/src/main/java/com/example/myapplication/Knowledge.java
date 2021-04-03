@@ -27,6 +27,7 @@ public class Knowledge extends Fragment {
     private Button button12;
     private Button button13;
     private Button button14;
+    public int selected;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -83,6 +84,7 @@ public class Knowledge extends Fragment {
             @Override
             public void onClick(View view) {
 
+                selected = 1;
                 NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledgeLevel1);//Take back to home fragment
 
 

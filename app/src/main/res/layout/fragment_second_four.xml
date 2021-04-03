@@ -9,58 +9,8 @@
 
 
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="122dp"
-        android:id="@+id/linearLayout2">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="21dp"
-            android:text="Input the following prompts" />
 
-        <EditText
-            android:id="@+id/nameInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Name (Bob)"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/emailInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email (bob@yahoo.com)"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/favoriteNumberInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout2"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:hint="Favorite Number (15)"
-            android:inputType="number" />
-
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-
-         />
-    </LinearLayout>
 
 
 
@@ -89,6 +39,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/imageViewCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/one_code"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

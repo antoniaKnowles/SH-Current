@@ -61,7 +61,7 @@ public class Knowledge extends Fragment {
         button8.setEnabled(true);
 
         button9 =  (Button) view.findViewById(R.id.button_Knowledge9);
-        button9.setEnabled(true);
+        button9.setEnabled(false);
 
         button10 =  (Button) view.findViewById(R.id.button_Knowledge10);
         button10.setEnabled(true);
@@ -76,7 +76,7 @@ public class Knowledge extends Fragment {
         button13.setEnabled(true);
 
         button14 =  (Button) view.findViewById(R.id.button_Knowledge14);
-        button14.setEnabled(true);
+        button14.setEnabled(false);
 
 
 
@@ -87,10 +87,115 @@ public class Knowledge extends Fragment {
                 MainActivity.setSelectedHelp(1);
                 NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
 
+            }
+        });
+
+        view.findViewById(R.id.button_Knowledge2).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(2);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
 
             }
         });
 
+        view.findViewById(R.id.button_Knowledge3).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(3);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+             }
+        });
+        view.findViewById(R.id.button_Knowledge4).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(4);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge5).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(5);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge6).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(6);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge7).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(7);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge8).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(8);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge9).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(9);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge10).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(10);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge11).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(11);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge12).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(12);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge13).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(13);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
+        view.findViewById(R.id.button_Knowledge14).setOnClickListener(new View.OnClickListener() {//On click of home button
+            @Override
+            public void onClick(View view) {
+
+                MainActivity.setSelectedHelp(14);
+                NavHostFragment.findNavController(Knowledge.this).navigate(R.id.action_knowledge_to_knowledge_Information);//Take back to home fragment
+            }
+        });
 
 
         view.findViewById(R.id.floatingActionButtonhome).setOnClickListener(new View.OnClickListener() {//On click of home button

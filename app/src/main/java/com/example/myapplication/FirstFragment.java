@@ -251,6 +251,18 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        view.findViewById(R.id.button_level14).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
+            @Override
+            public void onClick(View view) {
+                level = 14;
+                selectionOfLevel(level);
+                //  MainActivity.readIn2();
+                //Direct to the second fragment
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_secondFragmentFour);
+
+            }
+        });
+
 
         view.findViewById(R.id.button_Knowledge).setOnClickListener(new View.OnClickListener() {//if Knowledge button selected
             @Override

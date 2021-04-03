@@ -30,7 +30,21 @@ public class Knowledge_Information extends Fragment {
        // Knowledge k = new Knowledge(); - mQuestion1View.setText(R.string.Variable);
         mQuestion1View = (TextView) view.findViewById(R.id.textview_first_text);
        switch( MainActivity.getSelectedHelp()) {
-            case 1: mQuestion1View.setText(R.string.Variable); break;
+            case 1:
+           case 4:
+               mQuestion1View.setText(R.string.Variable); break;
+           case 2: mQuestion1View.setText(R.string.Symbols); break;
+           case 3:
+           case 5:
+               mQuestion1View.setText(R.string.Loops); break;
+           case 6: mQuestion1View.setText(R.string.Arrays); break;
+           case 7:
+           case 8:
+               mQuestion1View.setText(R.string.Structure); break;
+           case 13: mQuestion1View.setText(R.string.Polymorphism); break;
+           case 10: mQuestion1View.setText(R.string.Inheritance); break;
+           case 11: mQuestion1View.setText(R.string.Encapsulation); break;
+           case 12: mQuestion1View.setText(R.string.Abstraction); break;
        }
 
 

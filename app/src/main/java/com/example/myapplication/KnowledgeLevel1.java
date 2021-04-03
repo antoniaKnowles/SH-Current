@@ -27,6 +27,7 @@ class KnowledgeLevel1 extends Fragment {
         mQuestion1View = (TextView) view.findViewById(R.id.textview_second);
         switch( k.getSelected()) {
             case 1: mQuestion1View.setText(R.string.Variable); break;
+
         }
         super.onViewCreated(view, savedInstanceState);
 

@@ -138,18 +138,68 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
 
 
     private void updateQuestion() {
-        switch(mQuestionNumber) {
+        if(MainActivity.getlevel() == 9) {
+            switch (mQuestionNumber) {
 
-            case 0: image.setImageResource(R.drawable.nine_one);break;
-            case 1:image.setImageResource(R.drawable.nine_two);break;
-            case 2: image.setImageResource(R.drawable.nine_three);break;
-            case 3: image.setImageResource(R.drawable.nine_four);break;
-            case 4: image.setImageResource(R.drawable.nine_five);break;
-            case 5: image.setImageResource(R.drawable.nine_six);break;
-            case 6: image.setImageResource(R.drawable.nine_seven);break;
-            case 7: image.setImageResource(R.drawable.nine_eight);break;
-            default:break;
+                case 0:
+                    image.setImageResource(R.drawable.nine_one);
+                    break;
+                case 1:
+                    image.setImageResource(R.drawable.nine_two);
+                    break;
+                case 2:
+                    image.setImageResource(R.drawable.nine_three);
+                    break;
+                case 3:
+                    image.setImageResource(R.drawable.nine_four);
+                    break;
+                case 4:
+                    image.setImageResource(R.drawable.nine_five);
+                    break;
+                case 5:
+                    image.setImageResource(R.drawable.nine_six);
+                    break;
+                case 6:
+                    image.setImageResource(R.drawable.nine_seven);
+                    break;
+                case 7:
+                    image.setImageResource(R.drawable.nine_eight);
+                    break;
+                default:
+                    break;
 
+            }
+        }else{
+            switch (mQuestionNumber) {
+
+                case 0:
+                    image.setImageResource(R.drawable.fourteen_one);
+                    break;
+                case 1:
+                    image.setImageResource(R.drawable.fourteen_two);
+                    break;
+                case 2:
+                    image.setImageResource(R.drawable.fourteen_three);
+                    break;
+                case 3:
+                    image.setImageResource(R.drawable.fourteen_four);
+                    break;
+                case 4:
+                    image.setImageResource(R.drawable.fourteen_five);
+                    break;
+                case 5:
+                    image.setImageResource(R.drawable.fourteen_six);
+                    break;
+                case 6:
+                    image.setImageResource(R.drawable.fourteen_seven);
+                    break;
+                case 7:
+                    image.setImageResource(R.drawable.fourteen_eight);
+                    break;
+                default:
+                    break;
+
+            }
         }
 
         mButtonChoice1.setText(qLib.getchoice1(mQuestionNumber));

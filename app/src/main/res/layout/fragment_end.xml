@@ -2,14 +2,12 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@drawable/background"
-tools:context=".ThirdFragment">
-
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".end">
 
 
     <TextView
@@ -17,9 +15,9 @@ tools:context=".ThirdFragment">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
+        android:text="@string/Congratulations"
+        android:textColor="#000000"
         android:textSize="50sp"
-        android:text="@string/incorrectStatement"
-        android:textColor="#871313"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,8 +29,8 @@ tools:context=".ThirdFragment">
         android:id="@+id/incorect1_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/incorrectStatement"
-        android:textColor="#000000"
+        android:text="@string/Congratulations"
+        android:textColor="#FFFFFF"
         android:textSize="50sp"
 
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,35 +42,31 @@ tools:context=".ThirdFragment">
 
 
 
-
-
-
-
-<TextView
-    android:id="@+id/incorect1_2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/incorrectStatement2"
-    android:textSize="30sp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/incorect1_1"
-    app:layout_constraintVertical_bias="0.146" />
-
     <TextView
-        android:id="@+id/incorect_Ans"
-        android:layout_width="306dp"
-        android:layout_height="58dp"
-        android:text="answer"
+        android:id="@+id/incorect1_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/won"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/incorect1_1"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.146" />
 
+
+    <TextView
+        android:id="@+id/incorect1_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/won2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incorect1_1"
+        app:layout_constraintVertical_bias="0.303" />
 
     <Button
         android:id="@+id/button_third"
@@ -89,19 +83,7 @@ tools:context=".ThirdFragment">
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.672" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
-        android:layout_width="59dp"
-        android:layout_height="57dp"
-        android:clickable="true"
-        android:src="@drawable/ic_baseline_home_24"
-        app:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

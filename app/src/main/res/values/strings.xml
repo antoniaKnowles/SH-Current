@@ -546,16 +546,11 @@
         </string>
 
 
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+
     <string name="level_1">Level 1</string>
+    <string name="Congratulations">Congratulations</string>
+    <string name="won">You have Won the Game</string>
+    <string name="won2">Every level is still avalible for practice</string>
 
 
 </resources>

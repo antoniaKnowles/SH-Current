@@ -7,7 +7,7 @@ What is used when the access control;; is not defined?;;Private;;Public;;Void;;F
 What non-access modifier can be;; used to creating class methods?;;Private;;Static;;Public;;Final;;Static
 What non-access modifier finalizing;; the implementations of methods?;;Private;;Static;;Public;;Final;;Final
 What is the name of a variable passed;; into a method when it is called?;;Modifier;;InVariable;;Encapsulation;;Parameter;;Parameter
-Which can not be a return type?;; ;;String;;Void;;int;;Static;;Static
+Which can not be a return type?;; ;;String;;boolean;;int;;Static;;Static
 Which is not included in;;creating a method?;;Name of Method;;Parameters;;Modifiers;;Operations;;Operations
 public static String addNameToList(int a, int b) {};;Is this method creation?;;Yes;;No-()must be empty;;No-remove static;;No-remove String;;Yes
 public calculate(int a, int b) {};;Is this correct?;;No-remove public;;Yes;;No-requiresVoid;;No-()must be empty;;No-requiresVoid

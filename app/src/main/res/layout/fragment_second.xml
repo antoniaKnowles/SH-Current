@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/textview_second_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="241dp"
+        android:layout_height="63dp"
         android:text="question1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,8 +36,8 @@
 
     <Button
         android:id="@+id/button_one"
-        android:layout_width="212dp"
-        android:layout_height="48dp"
+        android:layout_width="252dp"
+        android:layout_height="61dp"
         android:layout_marginBottom="308dp"
         android:text="one"
         app:backgroundTint="@color/Dark"
@@ -51,8 +51,8 @@
 
     <Button
         android:id="@+id/button_two"
-        android:layout_width="212dp"
-        android:layout_height="48dp"
+        android:layout_width="252dp"
+        android:layout_height="61dp"
         android:layout_marginBottom="224dp"
         android:text="two"
         app:backgroundTint="@color/Dark"
@@ -65,8 +65,8 @@
 
     <Button
         android:id="@+id/button_three"
-        android:layout_width="212dp"
-        android:layout_height="48dp"
+        android:layout_width="252dp"
+        android:layout_height="61dp"
         android:layout_marginTop="28dp"
         android:text="three"
         app:backgroundTint="@color/Dark"
@@ -78,8 +78,8 @@
 
     <Button
         android:id="@+id/button_four"
-        android:layout_width="212dp"
-        android:layout_height="48dp"
+        android:layout_width="252dp"
+        android:layout_height="61dp"
         android:text="four"
         app:backgroundTint="@color/Dark"
         app:layout_constraintBottom_toBottomOf="parent"

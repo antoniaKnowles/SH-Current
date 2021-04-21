@@ -25,9 +25,6 @@
             android:id="@+id/action_FirstFragment_to_secondFragmentThree"
             app:destination="@id/secondFragmentThree" />
         <action
-            android:id="@+id/action_FirstFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
             android:id="@+id/action_FirstFragment_to_secondFragmentFour"
             app:destination="@id/secondFragmentFour" />
     </fragment>
@@ -204,15 +201,6 @@
             app:destination="@id/FirstFragment" />
     </fragment>
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.myapplication.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/secondFragmentFour"
         android:name="com.example.myapplication.SecondFragmentFour"
         android:label="fragment_second_four"
@@ -235,6 +223,9 @@
         <action
             android:id="@+id/action_secondFragmentFour_to_thirdFragmentFour"
             app:destination="@id/thirdFragmentFour" />
+        <action
+            android:id="@+id/action_secondFragmentFour_to_end2"
+            app:destination="@id/end2" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragmentFour"
@@ -258,6 +249,15 @@
             app:destination="@id/knowledge" />
         <action
             android:id="@+id/action_knowledge_Information_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/end2"
+        android:name="com.example.myapplication.end"
+        android:label="fragment_end"
+        tools:layout="@layout/fragment_end" >
+        <action
+            android:id="@+id/action_end2_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

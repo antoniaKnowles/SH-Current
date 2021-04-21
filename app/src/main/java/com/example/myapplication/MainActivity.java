@@ -30,22 +30,18 @@ public class MainActivity extends AppCompatActivity {
     public static int questionsaskedCount = 0;
     public static int selectedLevelHelp = 0;
 
-   // SecondFragmentFour fragmentFour_obj;
+
 
     public static ArrayList<String> getInput() {//needs to return diffrent array for every level
 
-       // return ReadInFIle.get(i);//return the input questions in format of strings for each separate question
-        //if 1
-        //if 2
-       // LevelSize[level][1] = arr.size();//number of question for this level
-      //  LevelSize[level][2] = (arr.size()/2);//number of question for this level
-        //maybe new method to check if level is passed
+
         return ReadInFile.get(level-1);
-       // return arr;
+
     }
 
     public static void resetLevel() {
         mQuestionNumber = 0;
+        questionsaskedCount = 0;
     }
 
 
@@ -62,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
         if(mQuestionNumber != 0) {
             LevelQuestion[level] = mQuestionNumber;
             mQuestionNumber = 0;
+        }
+        if(questionsaskedCount != 0) {
+            questionsaskedCount=0;
         }
 
         level = i;
@@ -145,10 +144,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static String checkCompleted() {
 
-        if((ReadInFile.get(level-1).size()<=(mQuestionNumber+1)) && (IncorrectQuestionNumber.size() == 0)){
+        if((ReadInFile.get(level-1).size()<=questionsaskedCount) && (IncorrectQuestionNumber.size() == 0)){
             //arr.size()
             return "Complete";
-        }else if ((((ReadInFile.get(level-1).size())/2)-1)==(mQuestionNumber-IncorrectQuestionNumber.size())){
+        }else if ((((ReadInFile.get(level-1).size())/2))==(questionsaskedCount-IncorrectQuestionNumber.size())&&(!((level== 9)||(level == 14)))){
             return "Pass";
         }
         return null;
@@ -228,22 +227,13 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-           // fragmentFour_obj = (SecondFragmentFour)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
 
 
         }
-        public void test(View v){
-            //fragmentFour_obj = (SecondFragmentFour)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
-         //  String input = fragmentFour_obj.e1.getText().toString();
-          //  System.out.println(input);
-        }
-
-    private String mStringFromFragment;
 
 
-   // public String getData() {
-     //   return editText.getText().toString();
-   // }
+
+
 
 
 

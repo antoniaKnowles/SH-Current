@@ -16,7 +16,6 @@ import java.io.IOException;
 
 public class SecondFragment extends Fragment {
 
-
     public Questions qLib = new Questions();
     public TextView mQuestion1View;
     public TextView mQuestion2View;

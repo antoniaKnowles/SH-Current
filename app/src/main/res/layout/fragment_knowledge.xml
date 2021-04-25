@@ -214,9 +214,7 @@ tools:context=".Knowledge">
         android:layout_width="212dp"
         android:layout_height="48dp"
         android:layout_marginTop="84dp"
-
         android:text="@string/level_1"
-
         app:backgroundTint="@color/Dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"

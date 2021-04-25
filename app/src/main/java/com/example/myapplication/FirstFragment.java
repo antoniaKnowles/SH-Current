@@ -48,44 +48,18 @@ public class FirstFragment extends Fragment {
          If it is true that the level has already been passed it will then be activated
          */
 
-        button2 =  (Button) view.findViewById(R.id.button_level2);
-        button2.setEnabled(MainActivity.checkPassed(2));
+        Button[] buttonName = new Button[] {button2,button3,button4,button5,button6,button7,button8,button9,button10,button11,button12,button13,button14};
+        int[] buttonId = new int[] {R.id.button_first,R.id.button_level2,R.id.button_level3,R.id.button_level4,R.id.button_level5,R.id.button_level6,R.id.button_level7,R.id.button_level8,R.id.button_level9,R.id.button_level10,R.id.button_level11,R.id.button_level12,R.id.button_level13,R.id.button_level14};
 
-        button3 =  (Button) view.findViewById(R.id.button_level3);
-        button3.setEnabled(MainActivity.checkPassed(3));
 
-        button4 =  (Button) view.findViewById(R.id.button_level4);
-        button4.setEnabled(MainActivity.checkPassed(4));
+        for(int j =0; j< buttonName.length;j++) {//https://www.youtube.com/watch?v=Vy_4sZ6JVHM
 
-        button5 =  (Button) view.findViewById(R.id.button_level5);
-        button5.setEnabled(MainActivity.checkPassed(5));
+            buttonName[j] = (Button) view.findViewById(buttonId[j+1]);//creates button
+            buttonName[j].setEnabled(MainActivity.checkPassed(j+2));// allow user access if the level has been recoded as passed
 
-        button6 =  (Button) view.findViewById(R.id.button_level6);
-        button6.setEnabled(MainActivity.checkPassed(6));
 
-        button7 =  (Button) view.findViewById(R.id.button_level7);
-        button7.setEnabled(MainActivity.checkPassed(7));
+        }
 
-        button8 =  (Button) view.findViewById(R.id.button_level8);
-        button8.setEnabled(MainActivity.checkPassed(8));
-
-        button9 =  (Button) view.findViewById(R.id.button_level9);
-        button9.setEnabled(MainActivity.checkPassed(9));
-
-        button10 =  (Button) view.findViewById(R.id.button_level10);
-        button10.setEnabled(MainActivity.checkPassed(10));
-
-        button11 =  (Button) view.findViewById(R.id.button_level11);
-        button11.setEnabled(MainActivity.checkPassed(11));
-
-        button12 =  (Button) view.findViewById(R.id.button_level12);
-        button12.setEnabled(MainActivity.checkPassed(12));
-
-        button13 =  (Button) view.findViewById(R.id.button_level13);
-        button13.setEnabled(MainActivity.checkPassed(13));
-
-        button14 =  (Button) view.findViewById(R.id.button_level14);
-        button14.setEnabled(MainActivity.checkPassed(14));
 
 
         view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {//if Level 1 button clicked
@@ -128,6 +102,11 @@ public class FirstFragment extends Fragment {
 
             }
         });
+
+
+
+
+
 
         view.findViewById(R.id.button_level4).setOnClickListener(new View.OnClickListener() {//if Level 4 button clicked
             @Override

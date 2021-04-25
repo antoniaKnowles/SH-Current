@@ -22,5 +22,6 @@
 
         </activity>
     </application>
-
+<!-- Tells the program what page to start on -->
+    <!-- part taken from Android studio starting template -->
 </manifest>

@@ -12,9 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.navigation.fragment.NavHostFragment;
 
 public class Knowledge_Information extends Fragment {
-    public TextView mQuestion1View;
-    //Knowledge k = new Knowledge();
-
 
 
 
@@ -27,20 +24,20 @@ public class Knowledge_Information extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-       // Knowledge k = new Knowledge(); - mQuestion1View.setText(R.string.Variable);
-        mQuestion1View = (TextView) view.findViewById(R.id.textview_first_text);
-       switch( MainActivity.getSelectedHelp()) {
+        TextView  mQuestion1View = (TextView) view.findViewById(R.id.textview_first_text);//gets the text view text
+
+       switch( MainActivity.getSelectedHelp()) {//select what to display based on the levels
             case 1:
            case 4:
-               mQuestion1View.setText(R.string.Variable); break;
+                   mQuestion1View.setText(R.string.Variable); break;
            case 2: mQuestion1View.setText(R.string.Symbols); break;
            case 3:
            case 5:
-               mQuestion1View.setText(R.string.Loops); break;
+                   mQuestion1View.setText(R.string.Loops); break;
            case 6: mQuestion1View.setText(R.string.Arrays); break;
            case 7:
            case 8:
-               mQuestion1View.setText(R.string.Structure); break;
+                    mQuestion1View.setText(R.string.Structure); break;
            case 13: mQuestion1View.setText(R.string.Polymorphism); break;
            case 10: mQuestion1View.setText(R.string.Inheritance); break;
            case 11: mQuestion1View.setText(R.string.Encapsulation); break;
@@ -54,15 +51,14 @@ public class Knowledge_Information extends Fragment {
 
                 NavHostFragment.findNavController(Knowledge_Information.this).navigate(R.id.action_knowledge_Information_to_FirstFragment);//Take back to home fragment
 
-
             }
         });
+
         view.findViewById(R.id.floatingActionButton_help).setOnClickListener(new View.OnClickListener() {//On click of home button
             @Override
             public void onClick(View view) {
 
                 NavHostFragment.findNavController(Knowledge_Information.this).navigate(R.id.action_knowledge_Information_to_knowledge);//Take back to home fragment
-
 
             }
         });

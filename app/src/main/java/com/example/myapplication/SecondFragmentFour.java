@@ -1,46 +1,42 @@
 package com.example.myapplication;
 
-import android.content.SharedPreferences;
-import android.media.Image;
+
 import android.os.Bundle;
-import android.app.Activity;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
+
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
+
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.lifecycle.Lifecycle;
+
 import androidx.navigation.fragment.NavHostFragment;
+/*
+This question file is for level 9 and 14 as they have images
+ */
 
 public class SecondFragmentFour extends Fragment {//https://javapapers.com/android/get-user-input-in-android/
 
 
 
-    public Questions qLib = new Questions();
+    public Questions q = new Questions();//creates the questions file
 
-    public Button mButtonChoice1;
-    public Button mButtonChoice2;
-    public Button mButtonChoice3;
-    public ImageView image;
-    private String mAnswer;
-    private int mQuestionNumber = MainActivity.getQuestionNumber();
+    public Button ButtonChoice1;//variable for button 1
+    public Button ButtonChoice2;//variable for button 2
+    public Button ButtonChoice3;//variable for button 3
+    public ImageView image;//image variable
+    private String Answer;//variable for the answer to be stored
+    private int QuestionNumber = MainActivity.getQuestionNumber();//get the question number in-case they are continuing the level
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        // Get the layout for this SecondFragment
            return inflater.inflate(R.layout.fragment_second_four, container, false);
     }
 
@@ -48,19 +44,23 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mButtonChoice1 = (Button) view.findViewById(R.id.button_four_1);
-        mButtonChoice2 = (Button) view.findViewById(R.id.button_four_2);
-        mButtonChoice3 = (Button) view.findViewById(R.id.button_four_3);
+         /*
+      Gets the image and buttons from xml layout, so they can be edited
+       */
+
+        ButtonChoice1 = (Button) view.findViewById(R.id.button_four_1);
+        ButtonChoice2 = (Button) view.findViewById(R.id.button_four_2);
+        ButtonChoice3 = (Button) view.findViewById(R.id.button_four_3);
         image = (ImageView) view.findViewById(R.id.imageViewCode) ;
 
-        qLib.ReadFilesOne();
-        updateQuestion();
+        q.ReadFilesOne();//reads in the file
+        updateQuestion();//updates the question as this is called for every separate question
 
         view.findViewById(R.id.button_four_1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (mButtonChoice1.getText().equals(mAnswer)) {
+                if (ButtonChoice1.getText().equals(Answer)) {
 
                     correct();
 
@@ -75,7 +75,7 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
             @Override
             public void onClick(View view) {
 
-                if (mButtonChoice2.getText().equals(mAnswer)) {
+                if (ButtonChoice2.getText().equals(Answer)) {
 
                     correct();
 
@@ -91,7 +91,7 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
             @Override
             public void onClick(View view) {
 
-                if (mButtonChoice3.getText().equals(mAnswer)) {
+                if (ButtonChoice3.getText().equals(Answer)) {
 
                     correct();
 
@@ -105,7 +105,7 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
 
         view.findViewById(R.id.floatingActionButton_help ).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {//if help button save everything and proceed to knowledge
                 MainActivity.addQuestionNumber();
                 MainActivity.newLevel(MainActivity.getlevel());
 
@@ -118,7 +118,7 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
 
         view.findViewById(R.id.floatingActionButtonhome).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {// menu button save all and proceed to home
                 MainActivity.addQuestionNumber();
                 MainActivity.newLevel(MainActivity.getlevel());
 
@@ -134,9 +134,9 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
     }
 
 
-    private void updateQuestion() {
-        if(MainActivity.getlevel() == 9) {
-            switch (mQuestionNumber) {
+    private void updateQuestion() {//get the image read in from file depending on the question number
+        if(MainActivity.getlevel() == 9) {//level 9
+            switch (QuestionNumber) {
 
                 case 0:
                     image.setImageResource(R.drawable.nine_one);
@@ -166,8 +166,8 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
                     break;
 
             }
-        }else{
-            switch (mQuestionNumber) {
+        }else{//level 14
+            switch (QuestionNumber) {
 
                 case 0:
                     image.setImageResource(R.drawable.fourteen_one);
@@ -199,19 +199,19 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
             }
         }
 
-        mButtonChoice1.setText(qLib.getchoice1(mQuestionNumber));
-        mButtonChoice2.setText(qLib.getchoice2(mQuestionNumber));
-        mButtonChoice3.setText(qLib.getchoice3(mQuestionNumber));
-        mAnswer = qLib.getAns(mQuestionNumber);
-        MainActivity.currentAns(mAnswer);
+        ButtonChoice1.setText(q.getchoice1(QuestionNumber));
+        ButtonChoice2.setText(q.getchoice2(QuestionNumber));
+        ButtonChoice3.setText(q.getchoice3(QuestionNumber));
+        Answer = q.getAns(QuestionNumber);
+        MainActivity.currentAns(Answer);
 
     }
 
     private void correct(){
-        if( MainActivity.checkCompleted() == "Pass"){
+        if( MainActivity.checkCompleted() == "Pass"){//check if passed
             NavHostFragment.findNavController(SecondFragmentFour.this).navigate(R.id.action_secondFragmentFour_to_levelPassed);
 
-        }else if( MainActivity.checkCompleted() == "Complete"){
+        }else if( MainActivity.checkCompleted() == "Complete"){//check if completed
             if(MainActivity.getlevel()==14) {
                 NavHostFragment.findNavController(SecondFragmentFour.this).navigate(R.id.action_secondFragmentFour_to_end2);
             }
@@ -223,7 +223,7 @@ public class SecondFragmentFour extends Fragment {//https://javapapers.com/andro
         }
     }
 
-    private void Incorrect(){
+    private void Incorrect(){//if incorrect add to incorrect
 
         MainActivity.addIncorrect();
 

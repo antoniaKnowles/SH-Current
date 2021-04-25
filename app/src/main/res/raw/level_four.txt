@@ -1,18 +1,18 @@
-int number = 99;;;Correct ?;;Yes;;No;;Yes
-float score = 5.6f;;;Correct?;;Yes;;No;;No
-String name = 'Ann';;;Correct?;;Yes;;No;;No
-Boolean user = false;;;Correct?;;Yes;;No;;No
-char FirstInitial 'A';;;Correct?;;Yes;;No;;No
-int id = 4.5;;;Correct?;;Yes;;No;;No
-String name = "Bob";;;Correct?;;Yes;;No;;Yes
-int = 0;;;Correct?;;Yes;;No;;No
-boolean user = false;;;Correct?;;Yes;;No;;Yes
-float score = "Sue";;;Correct?;;Yes;;No;;No
-char FirstInitial = "k";;;Correct?;;Yes;;No;;No
-String id = "56748394";;;Correct?;;Yes;;No;;Yes
-String id = 56748394;;;Correct?;;Yes;;No;;No
-boolean user = true;;;Correct?;;Yes;;No;;Yes
-float score = 5.6f;;;Correct?;;Yes;;No;;Yes
-String id = 56748394;;;Correct?;;Yes;;No;;No
-char FirstInitial = 'K';;;Correct?;;Yes;;No;;Yes
-boolean user = true;;;Correct?;;Yes;;No;;Yes
+int number = 99; ;;Correct Declaration?;;Yes;;No;;Yes
+float score = 5.6f; ;;Correct Declaration?;;Yes;;No;;No
+String name = 'Ann'; ;;Correct Declaration?;;Yes;;No;;No
+Boolean user = false; ;;Correct Declaration?;;Yes;;No;;No
+char FirstInitial 'A'; ;;Correct Declaration?;;Yes;;No;;No
+int id = 4.5; ;;Correct Declaration?;;Yes;;No;;No
+String name = "Bob"; ;;Correct Declaration?;;Yes;;No;;Yes
+int = 0; ;;Correct Declaration?;;Yes;;No;;No
+boolean user = false; ;;Correct Declaration?;;Yes;;No;;Yes
+float score = "Sue"; ;;Correct Declaration?;;Yes;;No;;No
+char FirstInitial = "k"; ;;Correct Declaration?;;Yes;;No;;No
+String id = "56748394"; ;;Correct Declaration?;;Yes;;No;;Yes
+String id = 56748394; ;;Correct Declaration?;;Yes;;No;;No
+boolean user = true;;;Correct Declaration?;;Yes;;No;;Yes
+float score = 5.6f; ;;Correct Declaration?;;Yes;;No;;Yes
+String id = 56748394; ;;Correct Declaration?;;Yes;;No;;No
+char FirstInitial = 'K'; ;;Correct Declaration?;;Yes;;No;;Yes
+boolean user = true; ;;Correct Declaration?;;Yes;;No;;Yes

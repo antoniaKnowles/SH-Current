@@ -25,9 +25,6 @@
             app:layout_constraintTop_toBottomOf="@+id/button_first"
             />
 
-
-
-
         <Button
             android:id="@+id/button_level3"
             android:layout_width="212dp"
@@ -49,7 +46,6 @@
             android:layout_width="212dp"
             android:layout_height="48dp"
             android:layout_marginTop="32dp"
-
             android:enabled="false"
             android:text="Level 4"
             app:backgroundTint="@color/Dark"

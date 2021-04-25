@@ -11,21 +11,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import java.io.IOException;
+/*
+Question level for 2 question lines and 2 answers
+ */
 
 public class SecondFragmentThree extends Fragment {
 
 
-    public Questions qLib = new Questions();
-    public TextView mQuestion1View;
-    public TextView mQuestion2View;
-    public Button mButtonChoice1;
-    public Button mButtonChoice2;
+    public Questions q = new Questions();//creates the questions file
+    public TextView Question1;//variable for the first line of the question
+    public TextView Question2;//variable for the second line of the question
+    public Button ButtonChoice1;//variable for button 1
+    public Button ButtonChoice2;//variable for button 2
 
 
-    private String mAnswer;
+    private String Answer;//variable for the answer to be stored
 
-    private int mQuestionNumber = MainActivity.getQuestionNumber();
+    private int QuestionNumber = MainActivity.getQuestionNumber();//get the question number in-case they are continuing the level
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,59 +39,64 @@ public class SecondFragmentThree extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+/*
+      Gets the textView and buttons from xml layout, so they can be edited
+       */
 
-        mQuestion1View = (TextView) view.findViewById(R.id.textview_second_three);
-        mQuestion2View = (TextView) view.findViewById(R.id.textview_second_two_three);
-        mButtonChoice1 = (Button) view.findViewById(R.id.button_one_three);
-        mButtonChoice2 = (Button) view.findViewById(R.id.button_two_three);
+        Question1 = (TextView) view.findViewById(R.id.textview_second_three);
+        Question2 = (TextView) view.findViewById(R.id.textview_second_two_three);
+        ButtonChoice1 = (Button) view.findViewById(R.id.button_one_three);
+        ButtonChoice2 = (Button) view.findViewById(R.id.button_two_three);
 
 
-        qLib.ReadFilesOne();
-        updateQuestion();
+        q.ReadFilesOne();//reads in the file
+        updateQuestion();//updates the question as this is called for every separate question
 
 
-        view.findViewById(R.id.floatingActionButton_help).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.floatingActionButton_help).setOnClickListener(new View.OnClickListener() {// if the help button is clicked
             @Override
             public void onClick(View view) {
 
                 MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(SecondFragmentThree.this)
-                        .navigate(R.id.action_secondFragmentThree_to_knowledge);
+                        .navigate(R.id.action_secondFragmentThree_to_knowledge);//passes the user to knowledge
 
 
             }
         });
 
-        view.findViewById(R.id.floatingActionButton2).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.floatingActionButton2).setOnClickListener(new View.OnClickListener() {//if the home button is clicked
             @Override
             public void onClick(View view) {
 
                 MainActivity.newLevel(MainActivity.getlevel());
 
                 NavHostFragment.findNavController(SecondFragmentThree.this)
-                        .navigate(R.id.action_secondFragmentThree_to_FirstFragment);
+                        .navigate(R.id.action_secondFragmentThree_to_FirstFragment);//passes the user to the home page
 
 
             }
         });
 
 
-
+/*
+Checks that the button selected is correct or incorrect
+ */
 
         view.findViewById(R.id.button_two_three).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
-                if (mButtonChoice2.getText().equals(mAnswer)) {
+                if (ButtonChoice2.getText().equals(Answer)) {
 
-                   // MainActivity.addQuestionNumber();
-correct();
-                   // NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentTwo_self);
+
+                 correct();
+
 
                 }else{
-                   // NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_to_thirdFragmentThree);
+
                Incorrect();
                 }
 
@@ -104,17 +111,13 @@ correct();
             public void onClick(View view) {
 
 
-                if (mButtonChoice1.getText().equals(mAnswer)) {
+                if (ButtonChoice1.getText().equals(Answer)) {
                     correct();
 
-                   // MainActivity.addQuestionNumber();
-
-                   // NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_self);
 
                 }else{
-Incorrect();
+                   Incorrect();
 
-                   // NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_to_thirdFragmentThree);
 
                 }
 
@@ -125,22 +128,22 @@ Incorrect();
     }
 
     private void updateQuestion() {
-        mQuestion1View.setText(qLib.getQuestion1(mQuestionNumber));//was questions
-        mQuestion2View.setText(qLib.getQuestion2(mQuestionNumber));
-        mButtonChoice1.setText(qLib.getchoice1(mQuestionNumber));
-        mButtonChoice2.setText(qLib.getchoice2(mQuestionNumber));
+        Question1.setText(q.getQuestion1(QuestionNumber));//resits questions
+        Question2.setText(q.getQuestion2(QuestionNumber));//resits questions
+        ButtonChoice1.setText(q.getchoice1(QuestionNumber));//resits button
+        ButtonChoice2.setText(q.getchoice2(QuestionNumber));//resits button
 
-        mAnswer = qLib.getAns(mQuestionNumber);
+        Answer = q.getAns(QuestionNumber);//answers saved
 
-        MainActivity.currentAns(mAnswer);
+        MainActivity.currentAns(Answer);
 
     }
 
     private void correct(){
-        if( MainActivity.checkCompleted() == "Pass"){
+        if( MainActivity.checkCompleted() == "Pass"){//checked if passed level
             NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_to_levelPassed);
 
-        }else if( MainActivity.checkCompleted() == "Complete"){
+        }else if( MainActivity.checkCompleted() == "Complete"){//checked if level competed
             NavHostFragment.findNavController(SecondFragmentThree.this).navigate(R.id.action_secondFragmentThree_to_levelCompleted);
 
         }else{
@@ -149,7 +152,7 @@ Incorrect();
         }
     }
 
-    private void Incorrect(){
+    private void Incorrect(){//incorrect level
 
         MainActivity.addIncorrect();
 

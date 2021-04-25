@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,20 +11,26 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import java.io.IOException;
+
+/*
+This class supports 2 lines of questions and four possible answers
+This class also has to be independent so it can be called again
+ */
 
 public class SecondFragment extends Fragment {
 
-    public Questions qLib = new Questions();
-    public TextView mQuestion1View;
-    public TextView mQuestion2View;
-    public Button mButtonChoice1;
-    public Button mButtonChoice2;
-    public Button mButtonChoice3;
-    public Button mButtonChoice4;
-    private String mAnswer;
+    public Questions q = new Questions();//creates the questions file
 
-    private int mQuestionNumber = MainActivity.getQuestionNumber();
+    public TextView Question1;//variable for the first line of the question
+    public TextView Question2;//variable for the second line of the question
+    public Button ButtonChoice1;//variable for button 1
+    public Button ButtonChoice2;//variable for button 2
+    public Button ButtonChoice3;//variable for button 3
+    public Button ButtonChoice4;//variable for button 4
+
+    private String Answer;//variable for the answer to be stored
+
+    private int QuestionNumber = MainActivity.getQuestionNumber();//get the question number in-case they are continuing the level
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,80 +42,67 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+      /*
+      Gets the textView and buttons from xml layout, so they can be edited
+       */
 
-        mQuestion1View = (TextView) view.findViewById(R.id.textview_second);
-        mQuestion2View = (TextView) view.findViewById(R.id.textview_second_two);
-        mButtonChoice1 = (Button) view.findViewById(R.id.button_one);
-        mButtonChoice2 = (Button) view.findViewById(R.id.button_two);
-        mButtonChoice3 = (Button) view.findViewById(R.id.button_three);
-        mButtonChoice4 = (Button) view.findViewById(R.id.button_four);
+        Question1 = (TextView) view.findViewById(R.id.textview_second);
+        Question2 = (TextView) view.findViewById(R.id.textview_second_two);
+        ButtonChoice1 = (Button) view.findViewById(R.id.button_one);
+        ButtonChoice2 = (Button) view.findViewById(R.id.button_two);
+        ButtonChoice3 = (Button) view.findViewById(R.id.button_three);
+        ButtonChoice4 = (Button) view.findViewById(R.id.button_four);
 
-        qLib.ReadFilesOne();
-        updateQuestion();
+        q.ReadFilesOne();//reads in the file
+        updateQuestion();//updates the question as this is called for every separate question
 
 
-        view.findViewById(R.id.floatingActionButton_help).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.floatingActionButton_help).setOnClickListener(new View.OnClickListener() {// if the help button is clicked
             @Override
             public void onClick(View view) {
 
-                MainActivity.newLevel(MainActivity.getlevel());
-
+                MainActivity.newLevel(MainActivity.getlevel());//ensures the level
                 NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_knowledge);
-
-
+                        .navigate(R.id.action_SecondFragment_to_knowledge);//passes the user to knowledge
             }
         });
 
-        view.findViewById(R.id.floatingActionButton2).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.floatingActionButton2).setOnClickListener(new View.OnClickListener() {//if the home button is clicked
             @Override
             public void onClick(View view) {
 
-                MainActivity.newLevel(MainActivity.getlevel());
-
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
-
-
+                MainActivity.newLevel(MainActivity.getlevel());//ensures the level
+               NavHostFragment.findNavController(SecondFragment.this)
+                        .navigate(R.id.action_SecondFragment_to_FirstFragment);//passes the user to the home page
             }
         });
 
-        view.findViewById(R.id.button_four).setOnClickListener(new View.OnClickListener() {
+
+        view.findViewById(R.id.button_four).setOnClickListener(new View.OnClickListener() {//if button four is selected
             @Override
             public void onClick(View view) {
 
-
-                if (mButtonChoice4.getText().equals(mAnswer)) {
-
-
-
-                    correct();
-
+                if (ButtonChoice4.getText().equals(Answer)) {
+                    correct();//if user selects correct
                 }else{
-
-                   Incorrect();
-
-
+                   Incorrect();//if user selects incorrect
                 }
-
             }
         });
+
+        /*
+        Similar code required for each button as they are waiting to see hwta is clicked
+         */
 
         view.findViewById(R.id.button_three).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
-                if (mButtonChoice3.getText().equals(mAnswer)) {
-
+                if (ButtonChoice3.getText().equals(Answer)) {
                     correct();
-
                 }else{
-
                     Incorrect();
-
                 }
-
             }
         });
 
@@ -119,17 +111,11 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-
-                if (mButtonChoice2.getText().equals(mAnswer)) {
-
+                if (ButtonChoice2.getText().equals(Answer)) {
                     correct();
-
                 }else{
                     Incorrect();
                 }
-
-
-
             }
         });
 
@@ -138,39 +124,36 @@ public class SecondFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-
-                if (mButtonChoice1.getText().equals(mAnswer)) {
-
+                if (ButtonChoice1.getText().equals(Answer)) {
                   correct();
-
-
-
                 }else{
-
-
-                  Incorrect();
-
+                    Incorrect();
                 }
-
             }
         });
 
 
     }
 
-    private void updateQuestion() {
-        mQuestion1View.setText(qLib.getQuestion1(mQuestionNumber));//was questions
-        mQuestion2View.setText(qLib.getQuestion2(mQuestionNumber));
-        mButtonChoice1.setText(qLib.getchoice1(mQuestionNumber));
-        mButtonChoice2.setText(qLib.getchoice2(mQuestionNumber));
-        mButtonChoice3.setText(qLib.getchoice3(mQuestionNumber));
-        mButtonChoice4.setText(qLib.getchoice4(mQuestionNumber));
-        mAnswer = qLib.getAns(mQuestionNumber);
+    /*
+    Ensures all the buttons are updated on the xml
+     */
 
-        MainActivity.currentAns(mAnswer);
+    private void updateQuestion() {
+        Question1.setText(q.getQuestion1(QuestionNumber));//gets the questions
+        Question2.setText(q.getQuestion2(QuestionNumber));
+        ButtonChoice1.setText(q.getchoice1(QuestionNumber));
+        ButtonChoice2.setText(q.getchoice2(QuestionNumber));
+        ButtonChoice3.setText(q.getchoice3(QuestionNumber));
+        ButtonChoice4.setText(q.getchoice4(QuestionNumber));
+        Answer = q.getAns(QuestionNumber);
+
+        MainActivity.currentAns(Answer);//tells the main what the current answer is so that it can be passed if answered incorrect
 
     }
-
+/*
+Next steps after choice is made
+ */
    private void correct(){
        if( MainActivity.checkCompleted() == "Pass"){
            NavHostFragment.findNavController(SecondFragment.this).navigate(R.id.action_SecondFragment_to_levelPassed);
@@ -178,18 +161,20 @@ public class SecondFragment extends Fragment {
        }else if( MainActivity.checkCompleted() == "Complete"){
            NavHostFragment.findNavController(SecondFragment.this).navigate(R.id.action_SecondFragment_to_levelCompleted);
 
-       }else{
+       }else{//if neither completed or passed level continue level
            MainActivity.addQuestionNumber();
            NavHostFragment.findNavController(SecondFragment.this).navigate(R.id.action_SecondFragment_self);
        }
    }
 
+   /*
+   if answered incorrectly
+    */
     private void Incorrect(){
 
-        MainActivity.addIncorrect();
-
+        MainActivity.addIncorrect();//add it to the array of incorrect question numbers
         NavHostFragment.findNavController(SecondFragment.this)
-                .navigate(R.id.action_SecondFragment_to_thirdFragment);
+                .navigate(R.id.action_SecondFragment_to_thirdFragment);//pass to incorrect fragment
     }
 
 

@@ -10,27 +10,31 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+/*
+This is the class to used if a incorrect answer is selected
+ */
+
 public class ThirdFragment extends Fragment {
 
 
-    public TextView Ans;
+    public TextView Answer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-      // Get the layout for this SecondFragment
+      // Get the layout for this Fragment
         return inflater.inflate(R.layout.fragment_third, container, false);
     }
 
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //MainActivity.addQuestionNumber();
 
 
-        Ans = (TextView)view.findViewById(R.id.incorect_Ans);
-        Ans.setText(MainActivity.getAns());
 
-        view.findViewById(R.id.floatingActionButton3).setOnClickListener(new View.OnClickListener() {
+        Answer = (TextView)view.findViewById(R.id.incorect_Ans);//gets the answer varable
+        Answer.setText(MainActivity.getAns());//sets the text to display the correct answer
+
+        view.findViewById(R.id.floatingActionButton3).setOnClickListener(new View.OnClickListener() {//home button
             @Override
             public void onClick(View view) {
                 MainActivity.addQuestionNumber();
@@ -43,7 +47,7 @@ public class ThirdFragment extends Fragment {
             }
         });
 
-        view.findViewById(R.id.button_third).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.button_third).setOnClickListener(new View.OnClickListener() {//continue on to the next question
             @Override
             public void onClick(View view) {
                 MainActivity.addQuestionNumber();

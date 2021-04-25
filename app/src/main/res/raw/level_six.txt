@@ -1,18 +1,18 @@
-;;;;String[] names;;;;;;;Does this create a array ?;;;;;;Yes;;No;;Yes
-;;;;names[0] = "Bob";;;;;;;Does this add to array?;;;;;;Yes;;No;;Yes
-;;;;String names;;;;;;;Does this create a array ?;;;;;;Yes;;No;;No
-;;;;System.out.println(names.length);;;;;;;Does this display array length?;;;;;;Yes;;No;;Yes
-;;;;names[0] = Bob;;;;;;;Does this add to array?;;;;;;Yes;;No;;No
-;;;;String[] names = {"Sue","Bob","Nick"};;;;;;;Does this create a array ?;;;;;;Yes;;No;;Yes
-;;;;for (String i : names) {;;  System.out.println(i);;;};;;;Does this loop through the names?;;;;Yes;;No;;Yes
-;;;;String[] names = {"Sue" "Bob" "Nick"};;;;;;;Does this create a array ?;;;;;;Yes;;No;;No
-;;;;int[][] scores;;;;;;;Does this create a Multidimensional Array?;;;;;;Yes;;No;;Yes
-;;;;for (String names) {;;  System.out.println(i);;;};;;;Does this loop through the names?;;;;Yes;;No;;No
-;;;;int[][] scores = {{5,43,6},{60,6,2}};;;;;;;Does this create a Multidimensional Array?;;;;;;Yes;;No;;Yes
-;;;;scores[0][4] = 8;;;;;;;Does this add to array?;;;;;;Yes;;No;;Yes
-;;;;int[][] scores = {5,43,6,60,6,2};;;;;;;Does this create a Multidimensional Array?;;;;;;Yes;;No;;No
-;;;;int x = scores[1][2];;;;;;;Does this get value from array?;;;;;;Yes;;No;;Yes
-;;;;scores[0][] = 8;;;;;;;Does this add to array?;;;;;;Yes;;No;;No
-;;for (int i = 0; i < scores.length; i++) {;;   for(int j = 0; j < scores[i].length; j++) {;;        System.out.println(scores[i][j]);;;    };; };;;;Correct ?;;Yes;;No;;Yes
-;;;;;;int x = scores[][];;;;;Does this get value from array?;;;;;;Yes;;No;;Nos
-;;for (int i = 0; i < scores.length; i++) {;;   for(int j = 0; j < scores.length; j++) {;;       System.out.println(scores[i][j]);;;    };; };;;;Correct ?;;Yes;;No;;No;;j loop requires a index of scores for length scores[i].length to get the second index length
+;;;;String[] names; ;;;;;;Does this create a array ?;;;;;;Yes;;No;;Yes
+;;;;names[0] = "Bob"; ;;;;;;Does this add to array?;;;;;;Yes;;No;;Yes
+;;;;String names; ;;;;;;Does this create a array ?;;;;;;Yes;;No;;No
+;;;;System.out.println(names.length); ;;;;;;Does this display array length?;;;;;;Yes;;No;;Yes
+;;;;names[0] = Bob; ;;;;;;Does this add to array?;;;;;;Yes;;No;;No
+;;;;String[] names = {"Sue","Bob","Nick"}; ;;;;;;Does this create a array ?;;;;;;Yes;;No;;Yes
+;;;;for (String i : names) {;;  System.out.println(i); ;;};;;;Does this loop through the names?;;;;Yes;;No;;Yes
+;;;;String[] names = {"Sue" "Bob" "Nick"}; ;;;;;;Does this create a array ?;;;;;;Yes;;No;;No
+;;;;int[][] scores; ;;;;;;Does this create a Multidimensional Array?;;;;;;Yes;;No;;Yes
+;;;;for (String names) {;;  System.out.println(i); ;;};;;;Does this loop through the names?;;;;Yes;;No;;No
+;;;;int[][] scores = {{5,43,6},{60,6,2}}; ;;;;;;Does this create a Multidimensional Array?;;;;;;Yes;;No;;Yes
+;;;;scores[0][4] = 8; ;;;;;;Does this add to array?;;;;;;Yes;;No;;Yes
+;;;;int[][] scores = {5,43,6,60,6,2}; ;;;;;;Does this create a Multidimensional Array?;;;;;;Yes;;No;;No
+;;;;int x = scores[1][2]; ;;;;;;Does this get value from array?;;;;;;Yes;;No;;Yes
+;;;;scores[0][] = 8; ;;;;;;Does this add to array?;;;;;;Yes;;No;;No
+;;for (int i = 0; i < scores.length; i++) {;;   for(int j = 0; j < scores[i].length; j++) {;;        System.out.println(scores[i][j]); ;;    };; };;;;Correct ?;;Yes;;No;;Yes
+;;;;;;int x = scores[][]; ;;;;Does this get value from array?;;;;;;Yes;;No;;No
+;;for (int i = 0; i < scores.length; i++) {;;   for(int j = 0; j < scores.length; j++) {;;       System.out.println(scores[i][j]); ;;    };; };;;;Correct ?;;Yes;;No;;No

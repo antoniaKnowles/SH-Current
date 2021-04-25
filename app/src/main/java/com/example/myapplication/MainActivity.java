@@ -1,8 +1,6 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
-import android.provider.Settings;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public static int questionsaskedCount = 0;//counts the number of questions asked
     public static int selectedLevelHelp = 0;//the level of help that was selected
     public static int[] LevelQuestion = new int[15];//the questions levels
-    public static ArrayList<String> arr = new ArrayList<String>();//reading in lines
+    public static ArrayList<String> arrayList = new ArrayList<String>();//reading in lines
    // public static ArrayList<Integer> ReadInNames = new ArrayList<Integer>();
     public static ArrayList<Integer> IncorrectQuestionNumber = new ArrayList<Integer>();//incorrect questions list for each level
     public static ArrayList<ArrayList<Integer>> IncorrectQuestionNumberStore = new ArrayList<ArrayList<Integer>>();//record of incorrect answer for each level
@@ -172,22 +170,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         ArrayList<Integer> ReadInNames = new ArrayList<Integer>();//file for reading in
-/*
-        ReadInNames.add(R.raw.level_one);
-        ReadInNames.add(R.raw.level_two);
-        ReadInNames.add(R.raw.level_three);
-        ReadInNames.add(R.raw.level_four);
-        ReadInNames.add(R.raw.level_five);
-        ReadInNames.add(R.raw.level_six);
-        ReadInNames.add(R.raw.level_seven);
-        ReadInNames.add(R.raw.level_eight);
-        ReadInNames.add(R.raw.level_nine);
-        ReadInNames.add(R.raw.level_ten);
-        ReadInNames.add(R.raw.level_eleven);
-        ReadInNames.add(R.raw.level_twelve);
-        ReadInNames.add(R.raw.level_thirteen);
-        ReadInNames.add(R.raw.level_fourteen);
-*/
+
         ReadInNames.addAll(Arrays.asList(R.raw.level_one, R.raw.level_two, R.raw.level_three, R.raw.level_four,
                 R.raw.level_five,R.raw.level_six,R.raw.level_seven,R.raw.level_eight,R.raw.level_nine,R.raw.level_ten,
                 R.raw.level_eleven,R.raw.level_twelve,R.raw.level_thirteen,R.raw.level_fourteen));// adds the files names
@@ -203,35 +186,40 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        for (int i = 0; i < ReadInNames.size(); i++) {
+        for (int i = 0; i < ReadInNames.size(); i++) {//https://www.techiedelight.com/how-to-read-file-using-inputstream-java/
 
 
-            String str = "";
-            InputStream is = this.getResources().openRawResource(ReadInNames.get(i));//gets the path to the files storing the Questions
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));//Reads in the file
+            String stringofLine = "";
+
+            InputStream inputStream = this.getResources().openRawResource(ReadInNames.get(i));//gets the path to the files storing the Questions
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));//Reads in the file
 
 
             while (true) {//while there is still lines to read
                 try {
-                    if ((str = reader.readLine()) == null)
+                    if ((stringofLine = reader.readLine()) == null)
                         break;//set the line to str as long as it isn't empty
                 } catch (IOException e) {//Exception catching
                     e.printStackTrace();
                 }
-                arr.add(str);//adding the Questions information to the list of questions
+
+
+                arrayList.add(stringofLine);//adding the Questions information to the list of questions
 
             }
 
             try {
-                is.close();//closes the input stream
+                inputStream.close();//closes the input stream
             } catch (IOException e) {//catches the exception
                 e.printStackTrace();
             }
 
-            for (int j = 0; j < arr.size(); j++) {
-                  ReadInFile.get(NumberReadIn).add(arr.get(j));//adds to the read in file
+
+            for (int j = 0; j < arrayList.size(); j++) {
+                  ReadInFile.get(NumberReadIn).add(arrayList.get(j));//adds to the read in file
             }
-              arr.clear();
+              arrayList.clear();
               NumberReadIn++;
             }
 
